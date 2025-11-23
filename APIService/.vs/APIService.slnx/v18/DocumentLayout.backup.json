@@ -1,12 +1,105 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\caitl\\Documents\\dev\\APIService\\",
-  "Documents": [],
+  "WorkspaceRootPath": "C:\\Users\\caitl\\Documents\\dev\\SOA_CA2_Web_Service\\APIService\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C03EDC59-EC52-C71B-2E11-290D8C155935}|APIService.csproj|c:\\users\\caitl\\documents\\dev\\soa_ca2_web_service\\apiservice\\controllers\\supplierscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C03EDC59-EC52-C71B-2E11-290D8C155935}|APIService.csproj|solutionrelative:controllers\\supplierscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C03EDC59-EC52-C71B-2E11-290D8C155935}|APIService.csproj|c:\\users\\caitl\\documents\\dev\\soa_ca2_web_service\\apiservice\\controllers\\drinkssalescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C03EDC59-EC52-C71B-2E11-290D8C155935}|APIService.csproj|solutionrelative:controllers\\drinkssalescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C03EDC59-EC52-C71B-2E11-290D8C155935}|APIService.csproj|c:\\users\\caitl\\documents\\dev\\soa_ca2_web_service\\apiservice\\models\\drinkssales.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C03EDC59-EC52-C71B-2E11-290D8C155935}|APIService.csproj|solutionrelative:models\\drinkssales.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C03EDC59-EC52-C71B-2E11-290D8C155935}|APIService.csproj|c:\\users\\caitl\\documents\\dev\\soa_ca2_web_service\\apiservice\\dtos\\saledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C03EDC59-EC52-C71B-2E11-290D8C155935}|APIService.csproj|solutionrelative:dtos\\saledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C03EDC59-EC52-C71B-2E11-290D8C155935}|APIService.csproj|c:\\users\\caitl\\documents\\dev\\soa_ca2_web_service\\apiservice\\models\\drinkscontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C03EDC59-EC52-C71B-2E11-290D8C155935}|APIService.csproj|solutionrelative:models\\drinkscontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "SuppliersController.cs",
+              "DocumentMoniker": "C:\\Users\\caitl\\Documents\\dev\\SOA_CA2_Web_Service\\APIService\\Controllers\\SuppliersController.cs",
+              "RelativeDocumentMoniker": "Controllers\\SuppliersController.cs",
+              "ToolTip": "C:\\Users\\caitl\\Documents\\dev\\SOA_CA2_Web_Service\\APIService\\Controllers\\SuppliersController.cs",
+              "RelativeToolTip": "Controllers\\SuppliersController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-23T17:53:45.212Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DrinksSalesController.cs",
+              "DocumentMoniker": "C:\\Users\\caitl\\Documents\\dev\\SOA_CA2_Web_Service\\APIService\\Controllers\\DrinksSalesController.cs",
+              "RelativeDocumentMoniker": "Controllers\\DrinksSalesController.cs",
+              "ToolTip": "C:\\Users\\caitl\\Documents\\dev\\SOA_CA2_Web_Service\\APIService\\Controllers\\DrinksSalesController.cs",
+              "RelativeToolTip": "Controllers\\DrinksSalesController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-23T17:53:15.619Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DrinksSales.cs",
+              "DocumentMoniker": "C:\\Users\\caitl\\Documents\\dev\\SOA_CA2_Web_Service\\APIService\\Models\\DrinksSales.cs",
+              "RelativeDocumentMoniker": "Models\\DrinksSales.cs",
+              "ToolTip": "C:\\Users\\caitl\\Documents\\dev\\SOA_CA2_Web_Service\\APIService\\Models\\DrinksSales.cs",
+              "RelativeToolTip": "Models\\DrinksSales.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-20T10:39:37.01Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "SaleDTO.cs",
+              "DocumentMoniker": "C:\\Users\\caitl\\Documents\\dev\\SOA_CA2_Web_Service\\APIService\\DTOs\\SaleDTO.cs",
+              "RelativeDocumentMoniker": "DTOs\\SaleDTO.cs",
+              "ToolTip": "C:\\Users\\caitl\\Documents\\dev\\SOA_CA2_Web_Service\\APIService\\DTOs\\SaleDTO.cs",
+              "RelativeToolTip": "DTOs\\SaleDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-23T17:11:25.553Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DrinksContext.cs",
+              "DocumentMoniker": "C:\\Users\\caitl\\Documents\\dev\\SOA_CA2_Web_Service\\APIService\\Models\\DrinksContext.cs",
+              "RelativeDocumentMoniker": "Models\\DrinksContext.cs",
+              "ToolTip": "C:\\Users\\caitl\\Documents\\dev\\SOA_CA2_Web_Service\\APIService\\Models\\DrinksContext.cs",
+              "RelativeToolTip": "Models\\DrinksContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAkAAABTAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-20T10:15:22.059Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }

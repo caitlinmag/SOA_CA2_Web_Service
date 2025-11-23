@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\caitl\\Documents\\dev\\APIService\\APIService.csproj": {}
+    "C:\\Users\\caitl\\Documents\\dev\\SOA_CA2_Web_Service\\APIService\\APIService.csproj": {}
   },
   "projects": {
-    "C:\\Users\\caitl\\Documents\\dev\\APIService\\APIService.csproj": {
+    "C:\\Users\\caitl\\Documents\\dev\\SOA_CA2_Web_Service\\APIService\\APIService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\caitl\\Documents\\dev\\APIService\\APIService.csproj",
+        "projectUniqueName": "C:\\Users\\caitl\\Documents\\dev\\SOA_CA2_Web_Service\\APIService\\APIService.csproj",
         "projectName": "APIService",
-        "projectPath": "C:\\Users\\caitl\\Documents\\dev\\APIService\\APIService.csproj",
+        "projectPath": "C:\\Users\\caitl\\Documents\\dev\\SOA_CA2_Web_Service\\APIService\\APIService.csproj",
         "packagesPath": "C:\\Users\\caitl\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\caitl\\Documents\\dev\\APIService\\obj\\",
+        "outputPath": "C:\\Users\\caitl\\Documents\\dev\\SOA_CA2_Web_Service\\APIService\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -51,6 +51,24 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Microsoft.EntityFrameworkCore.InMemory": {
+              "target": "Package",
+              "version": "[9.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.11, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[8.0.7, )"
+            },
+            "MongoDB.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[9.0.3, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.6.2, )"
