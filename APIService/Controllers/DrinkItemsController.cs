@@ -6,102 +6,126 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using APIService.Models;
+using APIService.Data;
+using APIService.DTOs;
 
 namespace APIService.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class DrinkItemsController : ControllerBase
-    {
-        private readonly DrinksContext _context;
+    public class DrinkItemsController : ControllerBase { 
+    
+        private readonly DrinksService _drinksService;
 
-        public DrinkItemsController(DrinksContext context)
+        public DrinkItemsController(DrinksService drinksService)
         {
-            _context = context;
+            _drinksService = drinksService;
         }
 
         // GET: api/DrinkItems
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<DrinkItem>>> GetDrinkItems()
+        public async Task<ActionResult<IEnumerable<DrinkDTO>>> GetDrinks()
         {
-            return await _context.DrinkItems.ToListAsync();
+            var drinks = await _drinksService.GetAllDrinks();
+
+            var drinksDtos = drinks.Select(drink => new DrinkDTO
+            {
+                DrinkItemId = drink.DrinkItemId,
+                DrinkName = drink.DrinkName,
+                DrinkType = drink.DrinkType,
+                Price = drink.Price
+            }).ToList();
+
+            return drinksDtos;
         }
 
-        // GET: api/DrinkItems/5
+
+        //GET: api/DrinkItems/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<DrinkItem>> GetDrinkItem(int id)
+        public async Task<ActionResult<DrinkDTO>> GetDrinkItem(string id)
         {
-            var drinkItem = await _context.DrinkItems.FindAsync(id);
+            var drinkItem = await _drinksService.GetDrinkByID(id);
 
             if (drinkItem == null)
             {
                 return NotFound();
             }
 
-            return drinkItem;
-        }
 
-        // PUT: api/DrinkItems/5
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-        [HttpPut("{id}")]
-        public async Task<IActionResult> PutDrinkItem(int id, DrinkItem drinkItem)
-        {
-            if (id != drinkItem.DrinkItemId)
+            var drinkDto = new DrinkDTO
             {
-                return BadRequest();
-            }
-
-            _context.Entry(drinkItem).State = EntityState.Modified;
-
-            try
-            {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!DrinkItemExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
-
-            return NoContent();
+                DrinkItemId = drinkItem.DrinkItemId,
+                DrinkName = drinkItem.DrinkName,
+                DrinkType = drinkItem.DrinkType,
+                Price = drinkItem.Price
+            };
+            return drinkDto;
         }
 
         // POST: api/DrinkItems
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
-        public async Task<ActionResult<DrinkItem>> PostDrinkItem(DrinkItem drinkItem)
+        public async Task<ActionResult<DrinkItem>> PostDrinkItem(DrinkCreateDTO drinkDto)
         {
-            _context.DrinkItems.Add(drinkItem);
-            await _context.SaveChangesAsync();
+            var newDrink = new DrinkItem
+            {
+                DrinkItemId = drinkDto.DrinkItemId,
+                DrinkName = drinkDto.DrinkName,
+                DrinkType = drinkDto.DrinkType,
+                Price = drinkDto.Price,
+                SupplierId = drinkDto.SupplierId
+            };
 
-            return CreatedAtAction("GetDrinkItem", new { id = drinkItem.DrinkItemId }, drinkItem);
+            await _drinksService.CreateDrink(newDrink);
+
+            var created = new DrinkDTO
+            {
+                DrinkItemId = newDrink.DrinkItemId,
+                DrinkName = newDrink.DrinkName,
+                DrinkType = newDrink.DrinkType,
+                Price = newDrink.Price,
+          
+            };
+
+            return CreatedAtAction(nameof(GetDrinkItem), new { id = created.DrinkItemId }, created);
         }
 
-        // DELETE: api/DrinkItems/5
-        [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteDrinkItem(int id)
+
+        //// PUT: api/DrinkItems/5
+        //// To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
+        [HttpPut("{id}")]
+        public async Task<IActionResult> PutDrinkItem(string id, DrinkUpdateDTO drinkDto)
         {
-            var drinkItem = await _context.DrinkItems.FindAsync(id);
-            if (drinkItem == null)
+            var currentDrink = await _drinksService.GetDrinkByID(id);
+
+            if(currentDrink == null)
             {
                 return NotFound();
             }
 
-            _context.DrinkItems.Remove(drinkItem);
-            await _context.SaveChangesAsync();
+            currentDrink.DrinkName = drinkDto.DrinkName;
+            currentDrink.DrinkType = drinkDto.DrinkType;
+
+            await _drinksService.UpdateDrink(id, currentDrink);
 
             return NoContent();
         }
 
-        private bool DrinkItemExists(int id)
+
+        // DELETE: api/DrinkItems/5
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteDrinkItem(string id)
         {
-            return _context.DrinkItems.Any(e => e.DrinkItemId == id);
+            var currentDrink = await _drinksService.GetDrinkByID(id);
+               
+            if (currentDrink == null)
+            {
+                return NotFound();
+            }
+
+            await _drinksService.DeleteDrink(id);
+
+            return NoContent();
         }
     }
 }

@@ -1,12 +1,17 @@
-﻿namespace APIService.Models
+﻿using MongoDB.Bson.Serialization.Attributes;
+using MongoDB.Bson.Serialization.Attributes;
+using MongoDB.Bson;
+using System.Text.Json.Serialization;
+
+namespace APIService.Models
 {
     public class DrinksSales
     {
-        public int DrinksSalesId { get; set; }
+        [BsonId]
+        [BsonRepresentation(BsonType.ObjectId)]
+        public string? DrinksSalesId { get; set; }
 
-        public int DrinkItemId { get; set; }
-        public DrinkItem DrinkItem { get; set; }
-
+        public string? DrinkItemId { get; set; }
         public int Quantity { get; set; }
         public DateTime DateOfSale {  get; set; }
     }

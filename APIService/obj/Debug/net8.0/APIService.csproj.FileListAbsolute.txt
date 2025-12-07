@@ -242,3 +242,9 @@ C:\Users\caitl\Documents\dev\SOA_CA2_Web_Service\APIService\bin\Debug\net8.0\run
 C:\Users\caitl\Documents\dev\SOA_CA2_Web_Service\APIService\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Drawing.Common.dll
 C:\Users\caitl\Documents\dev\SOA_CA2_Web_Service\APIService\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\caitl\Documents\dev\SOA_CA2_Web_Service\APIService\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Windows.Extensions.dll
+C:\Users\caitl\Documents\dev\SOA_CA2_Web_Service\APIService\bin\Debug\net8.0\DnsClient.dll
+C:\Users\caitl\Documents\dev\SOA_CA2_Web_Service\APIService\bin\Debug\net8.0\MongoDB.Bson.dll
+C:\Users\caitl\Documents\dev\SOA_CA2_Web_Service\APIService\bin\Debug\net8.0\MongoDB.Driver.dll
+C:\Users\caitl\Documents\dev\SOA_CA2_Web_Service\APIService\bin\Debug\net8.0\SharpCompress.dll
+C:\Users\caitl\Documents\dev\SOA_CA2_Web_Service\APIService\bin\Debug\net8.0\Snappier.dll
+C:\Users\caitl\Documents\dev\SOA_CA2_Web_Service\APIService\bin\Debug\net8.0\ZstdSharp.dll
