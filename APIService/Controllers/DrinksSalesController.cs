@@ -1,107 +1,131 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using APIService.Data;
+using APIService.DTOs;
+using APIService.Models;
+using APIService.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using APIService.Models;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace APIService.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class DrinksSalesController : ControllerBase
+    public class DrinkSalesController : ControllerBase
     {
-        private readonly DrinksContext _context;
+    
+        private readonly DrinkSaleService _salesService;
 
-        public DrinksSalesController(DrinksContext context)
+        public DrinkSalesController(DrinkSaleService salesService)
         {
-            _context = context;
+            _salesService = salesService;
         }
 
-        // GET: api/DrinksSales
+        // GET: api/DrinkItems
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<DrinksSales>>> GetDrinksSales()
+        public async Task<ActionResult<IEnumerable<SaleDTO>>> GetSales()
         {
-            return await _context.DrinksSales.ToListAsync();
+            var sales = await _salesService.GetAllSales();
+
+            var salesDtos = sales.Select(sale => new SaleDTO
+            {
+                DrinksSalesId = sale.DrinksSalesId,
+                DrinkItemId = sale.DrinkItemId,
+                Quantity = sale.Quantity,
+                DateOfSale = sale.DateOfSale
+            
+            }).ToList();
+
+            return salesDtos;
         }
 
-        // GET: api/DrinksSales/5
-        [HttpGet("{id}")]
-        public async Task<ActionResult<DrinksSales>> GetDrinksSales(int id)
-        {
-            var drinksSales = await _context.DrinksSales.FindAsync(id);
 
-            if (drinksSales == null)
+        //GET: api/DrinkItems/5
+        [HttpGet("{id}")]
+        public async Task<ActionResult<SaleDTO>> GetSale(string id)
+        {
+            var sale = await _salesService.GetSaleById(id);
+
+            if (sale == null)
             {
                 return NotFound();
             }
 
-            return drinksSales;
+
+            var saleDto = new SaleDTO
+            {
+                DrinksSalesId = sale.DrinksSalesId,
+                DrinkItemId = sale.DrinkItemId,
+                Quantity = sale.Quantity,
+                DateOfSale = sale.DateOfSale
+            };
+            return saleDto;
         }
 
-        // PUT: api/DrinksSales/5
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-        [HttpPut("{id}")]
-        public async Task<IActionResult> PutDrinksSales(int id, DrinksSales drinksSales)
-        {
-            if (id != drinksSales.DrinksSalesId)
-            {
-                return BadRequest();
-            }
-
-            _context.Entry(drinksSales).State = EntityState.Modified;
-
-            try
-            {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!DrinksSalesExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
-
-            return NoContent();
-        }
-
-        // POST: api/DrinksSales
+        // POST: api/DrinkItems
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
-        public async Task<ActionResult<DrinksSales>> PostDrinksSales(DrinksSales drinksSales)
+        public async Task<ActionResult<DrinksSales>> PostSaleItem(SaleCreateDTO saleDto)
         {
-            _context.DrinksSales.Add(drinksSales);
-            await _context.SaveChangesAsync();
+            var newSale = new DrinksSales
+            {
+                DrinkItemId = saleDto.DrinkItemId,
+                Quantity = saleDto.Quantity,
+                DateOfSale = DateTime.UtcNow
+            };
 
-            return CreatedAtAction("GetDrinksSales", new { id = drinksSales.DrinksSalesId }, drinksSales);
+            await _salesService.CreateSale(newSale);
+
+            var created = new SaleDTO
+            {
+               DrinksSalesId = newSale.DrinksSalesId,
+               DrinkItemId = newSale.DrinkItemId,
+               Quantity = newSale.Quantity,
+               DateOfSale = newSale.DateOfSale
+            };
+
+            return CreatedAtAction(nameof(GetSales), new { id = created.DrinksSalesId }, created);
         }
 
-        // DELETE: api/DrinksSales/5
-        [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteDrinksSales(int id)
+
+        //// PUT: api/DrinkItems/5
+        //// To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
+        [HttpPut("{id}")]
+        public async Task<IActionResult> PutSalesItem(string id, SaleUpdateDTO saleDto)
         {
-            var drinksSales = await _context.DrinksSales.FindAsync(id);
-            if (drinksSales == null)
+            var currentSale = await _salesService.GetSaleById(id);
+
+            if (currentSale == null)
             {
                 return NotFound();
             }
 
-            _context.DrinksSales.Remove(drinksSales);
-            await _context.SaveChangesAsync();
+            currentSale.DrinkItemId = saleDto.DrinkItemId;
+            currentSale.Quantity = saleDto.Quantity;
+
+            await _salesService.UpdateSale(id, currentSale);
 
             return NoContent();
         }
 
-        private bool DrinksSalesExists(int id)
+
+        // DELETE: api/DrinkItems/5
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteSaleItem(string id)
         {
-            return _context.DrinksSales.Any(e => e.DrinksSalesId == id);
+            var currentSale = await _salesService.GetSaleById(id);
+
+            if (currentSale == null)
+            {
+                return NotFound();
+            }
+
+            await _salesService.DeleteSale(id);
+
+            return NoContent();
         }
     }
 }

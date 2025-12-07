@@ -4,7 +4,7 @@
     {
         public string? DrinkName { get; set; }
         public string? DrinkType { get; set; }
-        public int Price { get; set; }
+        public double Price { get; set; }
         public string? Extras { get; set; }
     }
 }

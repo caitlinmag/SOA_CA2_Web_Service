@@ -18,7 +18,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/DrinkItem"
+                    "$ref": "#/components/schemas/DrinkDTO"
                   }
                 }
               },
@@ -26,7 +26,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/DrinkItem"
+                    "$ref": "#/components/schemas/DrinkDTO"
                   }
                 }
               },
@@ -34,7 +34,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/DrinkItem"
+                    "$ref": "#/components/schemas/DrinkDTO"
                   }
                 }
               }
@@ -50,17 +50,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/DrinkItem"
+                "$ref": "#/components/schemas/DrinkCreateDTO"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/DrinkItem"
+                "$ref": "#/components/schemas/DrinkCreateDTO"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/DrinkItem"
+                "$ref": "#/components/schemas/DrinkCreateDTO"
               }
             }
           }
@@ -100,8 +100,7 @@
             "in": "path",
             "required": true,
             "schema": {
-              "type": "integer",
-              "format": "int32"
+              "type": "string"
             }
           }
         ],
@@ -111,17 +110,17 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/DrinkItem"
+                  "$ref": "#/components/schemas/DrinkDTO"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DrinkItem"
+                  "$ref": "#/components/schemas/DrinkDTO"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DrinkItem"
+                  "$ref": "#/components/schemas/DrinkDTO"
                 }
               }
             }
@@ -138,8 +137,7 @@
             "in": "path",
             "required": true,
             "schema": {
-              "type": "integer",
-              "format": "int32"
+              "type": "string"
             }
           }
         ],
@@ -147,17 +145,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/DrinkItem"
+                "$ref": "#/components/schemas/DrinkUpdateDTO"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/DrinkItem"
+                "$ref": "#/components/schemas/DrinkUpdateDTO"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/DrinkItem"
+                "$ref": "#/components/schemas/DrinkUpdateDTO"
               }
             }
           }
@@ -178,8 +176,7 @@
             "in": "path",
             "required": true,
             "schema": {
-              "type": "integer",
-              "format": "int32"
+              "type": "string"
             }
           }
         ],
@@ -190,10 +187,10 @@
         }
       }
     },
-    "/api/DrinksSales": {
+    "/api/DrinkSales": {
       "get": {
         "tags": [
-          "DrinksSales"
+          "DrinkSales"
         ],
         "responses": {
           "200": {
@@ -203,7 +200,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/DrinksSales"
+                    "$ref": "#/components/schemas/SaleDTO"
                   }
                 }
               },
@@ -211,7 +208,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/DrinksSales"
+                    "$ref": "#/components/schemas/SaleDTO"
                   }
                 }
               },
@@ -219,7 +216,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/DrinksSales"
+                    "$ref": "#/components/schemas/SaleDTO"
                   }
                 }
               }
@@ -229,23 +226,23 @@
       },
       "post": {
         "tags": [
-          "DrinksSales"
+          "DrinkSales"
         ],
         "requestBody": {
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/DrinksSales"
+                "$ref": "#/components/schemas/SaleCreateDTO"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/DrinksSales"
+                "$ref": "#/components/schemas/SaleCreateDTO"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/DrinksSales"
+                "$ref": "#/components/schemas/SaleCreateDTO"
               }
             }
           }
@@ -274,10 +271,10 @@
         }
       }
     },
-    "/api/DrinksSales/{id}": {
+    "/api/DrinkSales/{id}": {
       "get": {
         "tags": [
-          "DrinksSales"
+          "DrinkSales"
         ],
         "parameters": [
           {
@@ -285,8 +282,7 @@
             "in": "path",
             "required": true,
             "schema": {
-              "type": "integer",
-              "format": "int32"
+              "type": "string"
             }
           }
         ],
@@ -296,17 +292,17 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/DrinksSales"
+                  "$ref": "#/components/schemas/SaleDTO"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DrinksSales"
+                  "$ref": "#/components/schemas/SaleDTO"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DrinksSales"
+                  "$ref": "#/components/schemas/SaleDTO"
                 }
               }
             }
@@ -315,7 +311,7 @@
       },
       "put": {
         "tags": [
-          "DrinksSales"
+          "DrinkSales"
         ],
         "parameters": [
           {
@@ -323,8 +319,7 @@
             "in": "path",
             "required": true,
             "schema": {
-              "type": "integer",
-              "format": "int32"
+              "type": "string"
             }
           }
         ],
@@ -332,17 +327,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/DrinksSales"
+                "$ref": "#/components/schemas/SaleUpdateDTO"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/DrinksSales"
+                "$ref": "#/components/schemas/SaleUpdateDTO"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/DrinksSales"
+                "$ref": "#/components/schemas/SaleUpdateDTO"
               }
             }
           }
@@ -355,7 +350,7 @@
       },
       "delete": {
         "tags": [
-          "DrinksSales"
+          "DrinkSales"
         ],
         "parameters": [
           {
@@ -363,8 +358,7 @@
             "in": "path",
             "required": true,
             "schema": {
-              "type": "integer",
-              "format": "int32"
+              "type": "string"
             }
           }
         ],
@@ -388,7 +382,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Supplier"
+                    "$ref": "#/components/schemas/SupplierDTO"
                   }
                 }
               },
@@ -396,7 +390,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Supplier"
+                    "$ref": "#/components/schemas/SupplierDTO"
                   }
                 }
               },
@@ -404,7 +398,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Supplier"
+                    "$ref": "#/components/schemas/SupplierDTO"
                   }
                 }
               }
@@ -420,17 +414,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/Supplier"
+                "$ref": "#/components/schemas/SupplierCreateDTO"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/Supplier"
+                "$ref": "#/components/schemas/SupplierCreateDTO"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/Supplier"
+                "$ref": "#/components/schemas/SupplierCreateDTO"
               }
             }
           }
@@ -470,8 +464,7 @@
             "in": "path",
             "required": true,
             "schema": {
-              "type": "integer",
-              "format": "int32"
+              "type": "string"
             }
           }
         ],
@@ -481,17 +474,17 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/Supplier"
+                  "$ref": "#/components/schemas/SupplierDTO"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Supplier"
+                  "$ref": "#/components/schemas/SupplierDTO"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Supplier"
+                  "$ref": "#/components/schemas/SupplierDTO"
                 }
               }
             }
@@ -508,8 +501,7 @@
             "in": "path",
             "required": true,
             "schema": {
-              "type": "integer",
-              "format": "int32"
+              "type": "string"
             }
           }
         ],
@@ -517,17 +509,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/Supplier"
+                "$ref": "#/components/schemas/SupplierUpdateDTO"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/Supplier"
+                "$ref": "#/components/schemas/SupplierUpdateDTO"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/Supplier"
+                "$ref": "#/components/schemas/SupplierUpdateDTO"
               }
             }
           }
@@ -548,8 +540,7 @@
             "in": "path",
             "required": true,
             "schema": {
-              "type": "integer",
-              "format": "int32"
+              "type": "string"
             }
           }
         ],
@@ -563,12 +554,72 @@
   },
   "components": {
     "schemas": {
+      "DrinkCreateDTO": {
+        "type": "object",
+        "properties": {
+          "drinkItemId": {
+            "type": "string",
+            "nullable": true
+          },
+          "drinkName": {
+            "type": "string",
+            "nullable": true
+          },
+          "drinkType": {
+            "type": "string",
+            "nullable": true
+          },
+          "price": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "extras": {
+            "type": "string",
+            "nullable": true
+          },
+          "supplierId": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "DrinkDTO": {
+        "type": "object",
+        "properties": {
+          "drinkItemId": {
+            "type": "string",
+            "nullable": true
+          },
+          "drinkName": {
+            "type": "string",
+            "nullable": true
+          },
+          "drinkType": {
+            "type": "string",
+            "nullable": true
+          },
+          "price": {
+            "type": "number",
+            "format": "double"
+          },
+          "extras": {
+            "type": "string",
+            "nullable": true
+          },
+          "supplierName": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "DrinkItem": {
         "type": "object",
         "properties": {
           "drinkItemId": {
-            "type": "integer",
-            "format": "int32"
+            "type": "string",
+            "nullable": true
           },
           "drinkName": {
             "type": "string",
@@ -587,17 +638,29 @@
             "nullable": true
           },
           "supplierId": {
-            "type": "integer",
-            "format": "int32"
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "DrinkUpdateDTO": {
+        "type": "object",
+        "properties": {
+          "drinkName": {
+            "type": "string",
+            "nullable": true
           },
-          "supplier": {
-            "$ref": "#/components/schemas/Supplier"
+          "drinkType": {
+            "type": "string",
+            "nullable": true
           },
-          "sales": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/DrinksSales"
-            },
+          "price": {
+            "type": "number",
+            "format": "double"
+          },
+          "extras": {
+            "type": "string",
             "nullable": true
           }
         },
@@ -607,15 +670,12 @@
         "type": "object",
         "properties": {
           "drinksSalesId": {
-            "type": "integer",
-            "format": "int32"
+            "type": "string",
+            "nullable": true
           },
           "drinkItemId": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "drinkItem": {
-            "$ref": "#/components/schemas/DrinkItem"
+            "type": "string",
+            "nullable": true
           },
           "quantity": {
             "type": "integer",
@@ -628,12 +688,62 @@
         },
         "additionalProperties": false
       },
+      "SaleCreateDTO": {
+        "type": "object",
+        "properties": {
+          "drinkItemId": {
+            "type": "string",
+            "nullable": true
+          },
+          "quantity": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "SaleDTO": {
+        "type": "object",
+        "properties": {
+          "drinksSalesId": {
+            "type": "string",
+            "nullable": true
+          },
+          "drinkItemId": {
+            "type": "string",
+            "nullable": true
+          },
+          "quantity": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "dateOfSale": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "additionalProperties": false
+      },
+      "SaleUpdateDTO": {
+        "type": "object",
+        "properties": {
+          "drinkItemId": {
+            "type": "string",
+            "nullable": true
+          },
+          "quantity": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
       "Supplier": {
         "type": "object",
         "properties": {
           "supplierId": {
-            "type": "integer",
-            "format": "int32"
+            "type": "string",
+            "nullable": true
           },
           "supplierName": {
             "type": "string",
@@ -646,13 +756,64 @@
           "stockLevel": {
             "type": "integer",
             "format": "int32"
-          },
-          "drinkItems": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/DrinkItem"
-            },
+          }
+        },
+        "additionalProperties": false
+      },
+      "SupplierCreateDTO": {
+        "type": "object",
+        "properties": {
+          "supplierName": {
+            "type": "string",
             "nullable": true
+          },
+          "location": {
+            "type": "string",
+            "nullable": true
+          },
+          "stockLevel": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "SupplierDTO": {
+        "type": "object",
+        "properties": {
+          "supplierId": {
+            "type": "string",
+            "nullable": true
+          },
+          "supplierName": {
+            "type": "string",
+            "nullable": true
+          },
+          "location": {
+            "type": "string",
+            "nullable": true
+          },
+          "stockLevel": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "SupplierUpdateDTO": {
+        "type": "object",
+        "properties": {
+          "supplierName": {
+            "type": "string",
+            "nullable": true
+          },
+          "location": {
+            "type": "string",
+            "nullable": true
+          },
+          "stockLevel": {
+            "type": "integer",
+            "format": "int32"
           }
         },
         "additionalProperties": false

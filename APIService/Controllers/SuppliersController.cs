@@ -1,11 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using APIService.DTOs;
+using APIService.Models;
+using APIService.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using APIService.Models;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace APIService.Controllers
 {
@@ -13,95 +15,119 @@ namespace APIService.Controllers
     [ApiController]
     public class SuppliersController : ControllerBase
     {
-        private readonly DrinksContext _context;
+        private readonly SupplierService _supplierService;
 
-        public SuppliersController(DrinksContext context)
+        public SuppliersController(SupplierService supplierService)
         {
-            _context = context;
+           _supplierService = supplierService;
         }
 
         // GET: api/Suppliers
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Supplier>>> GetSupplier()
+        public async Task<ActionResult<IEnumerable<SupplierDTO>>> GetSuppliers()
         {
-            return await _context.Supplier.ToListAsync();
+            var suppliers = await _supplierService.GetAllSuppliers();
+
+            var supplierDto = suppliers.Select(supplier => new SupplierDTO
+            {
+               SupplierId = supplier.SupplierId,
+               SupplierName = supplier.SupplierName,
+               Location = supplier.Location,
+               StockLevel = supplier.StockLevel,
+
+            }).ToList();
+
+            return supplierDto;
         }
 
         // GET: api/Suppliers/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<Supplier>> GetSupplier(int id)
+        public async Task<ActionResult<SupplierDTO>> GetSupplier(string id)
         {
-            var supplier = await _context.Supplier.FindAsync(id);
+            var supplier = await _supplierService.GetSupplierById(id);
 
             if (supplier == null)
             {
                 return NotFound();
             }
 
-            return supplier;
+            var supplierDto = new SupplierDTO
+            {
+                SupplierId = supplier.SupplierId,
+                SupplierName = supplier.SupplierName,
+                Location = supplier.Location,
+                StockLevel = supplier.StockLevel
+            };
+
+            return supplierDto;
         }
 
-        // PUT: api/Suppliers/5
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-        [HttpPut("{id}")]
-        public async Task<IActionResult> PutSupplier(int id, Supplier supplier)
-        {
-            if (id != supplier.SupplierId)
-            {
-                return BadRequest();
-            }
-
-            _context.Entry(supplier).State = EntityState.Modified;
-
-            try
-            {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!SupplierExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
-
-            return NoContent();
-        }
 
         // POST: api/Suppliers
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
-        public async Task<ActionResult<Supplier>> PostSupplier(Supplier supplier)
+        public async Task<ActionResult<Supplier>> PostSupplier(SupplierCreateDTO supplierDto)
         {
-            _context.Supplier.Add(supplier);
-            await _context.SaveChangesAsync();
+            var newSupplier = new Supplier
+            {
+                SupplierName = supplierDto.SupplierName,
+                Location = supplierDto.Location,
+                StockLevel = supplierDto.StockLevel
+            };
 
-            return CreatedAtAction("GetSupplier", new { id = supplier.SupplierId }, supplier);
+            await _supplierService.CreateSupplier(newSupplier);
+
+            var created = new SupplierDTO
+            {
+               SupplierId = newSupplier.SupplierId,
+               SupplierName = newSupplier.SupplierName,
+               Location = newSupplier.Location,
+               StockLevel = newSupplier.StockLevel
+            };
+
+            return CreatedAtAction(nameof(GetSuppliers), new { id = created.SupplierId }, created);
         }
 
-        // DELETE: api/Suppliers/5
-        [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteSupplier(int id)
+
+        // PUT: api/Suppliers/5
+        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
+        [HttpPut("{id}")]
+        public async Task<IActionResult> PutSupplier(string id, SupplierUpdateDTO supplierDto)
         {
-            var supplier = await _context.Supplier.FindAsync(id);
-            if (supplier == null)
+            var currentSupplier = await _supplierService.GetSupplierById(id);
+
+            if (currentSupplier == null)
             {
                 return NotFound();
             }
 
-            _context.Supplier.Remove(supplier);
-            await _context.SaveChangesAsync();
+            currentSupplier.SupplierName = supplierDto.SupplierName;
+            currentSupplier.Location = supplierDto.Location;
+            currentSupplier.StockLevel = supplierDto.StockLevel;
+
+            await _supplierService.UpdateSupplier(id, currentSupplier);
 
             return NoContent();
         }
 
-        private bool SupplierExists(int id)
+     
+
+        // DELETE: api/Suppliers/5
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteSupplier(string id)
         {
-            return _context.Supplier.Any(e => e.SupplierId == id);
+            var currentSupplier = await _supplierService.GetSupplierById(id);
+
+            if (currentSupplier == null)
+            {
+                return NotFound();
+            }
+
+            await _supplierService.DeleteSupplier(id);
+
+            return NoContent();
         }
+
+       
     }
 }

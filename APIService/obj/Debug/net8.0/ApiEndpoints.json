@@ -1,7 +1,7 @@
 [
   {
     "ContainingType": "APIService.Controllers.DrinkItemsController",
-    "Method": "GetDrinkItems",
+    "Method": "GetDrinks",
     "RelativePath": "api/DrinkItems",
     "HttpMethod": "GET",
     "IsController": true,
@@ -9,7 +9,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[APIService.Models.DrinkItem, APIService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[APIService.DTOs.DrinkDTO, APIService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -28,8 +28,8 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "drinkItem",
-        "Type": "APIService.Models.DrinkItem",
+        "Name": "drinkDto",
+        "Type": "APIService.DTOs.DrinkCreateDTO",
         "IsRequired": true
       }
     ],
@@ -55,13 +55,13 @@
     "Parameters": [
       {
         "Name": "id",
-        "Type": "System.Int32",
+        "Type": "System.String",
         "IsRequired": true
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "APIService.Models.DrinkItem",
+        "Type": "APIService.DTOs.DrinkDTO",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -81,12 +81,12 @@
     "Parameters": [
       {
         "Name": "id",
-        "Type": "System.Int32",
+        "Type": "System.String",
         "IsRequired": true
       },
       {
-        "Name": "drinkItem",
-        "Type": "APIService.Models.DrinkItem",
+        "Name": "drinkDto",
+        "Type": "APIService.DTOs.DrinkUpdateDTO",
         "IsRequired": true
       }
     ],
@@ -102,23 +102,23 @@
     "Parameters": [
       {
         "Name": "id",
-        "Type": "System.Int32",
+        "Type": "System.String",
         "IsRequired": true
       }
     ],
     "ReturnTypes": []
   },
   {
-    "ContainingType": "APIService.Controllers.DrinksSalesController",
-    "Method": "GetDrinksSales",
-    "RelativePath": "api/DrinksSales",
+    "ContainingType": "APIService.Controllers.DrinkSalesController",
+    "Method": "GetSales",
+    "RelativePath": "api/DrinkSales",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[APIService.Models.DrinksSales, APIService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[APIService.DTOs.SaleDTO, APIService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -129,16 +129,16 @@
     ]
   },
   {
-    "ContainingType": "APIService.Controllers.DrinksSalesController",
-    "Method": "PostDrinksSales",
-    "RelativePath": "api/DrinksSales",
+    "ContainingType": "APIService.Controllers.DrinkSalesController",
+    "Method": "PostSaleItem",
+    "RelativePath": "api/DrinkSales",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "drinksSales",
-        "Type": "APIService.Models.DrinksSales",
+        "Name": "saleDto",
+        "Type": "APIService.DTOs.SaleCreateDTO",
         "IsRequired": true
       }
     ],
@@ -155,22 +155,22 @@
     ]
   },
   {
-    "ContainingType": "APIService.Controllers.DrinksSalesController",
-    "Method": "GetDrinksSales",
-    "RelativePath": "api/DrinksSales/{id}",
+    "ContainingType": "APIService.Controllers.DrinkSalesController",
+    "Method": "GetSale",
+    "RelativePath": "api/DrinkSales/{id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
         "Name": "id",
-        "Type": "System.Int32",
+        "Type": "System.String",
         "IsRequired": true
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "APIService.Models.DrinksSales",
+        "Type": "APIService.DTOs.SaleDTO",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -181,37 +181,37 @@
     ]
   },
   {
-    "ContainingType": "APIService.Controllers.DrinksSalesController",
-    "Method": "PutDrinksSales",
-    "RelativePath": "api/DrinksSales/{id}",
+    "ContainingType": "APIService.Controllers.DrinkSalesController",
+    "Method": "PutSalesItem",
+    "RelativePath": "api/DrinkSales/{id}",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
         "Name": "id",
-        "Type": "System.Int32",
+        "Type": "System.String",
         "IsRequired": true
       },
       {
-        "Name": "drinksSales",
-        "Type": "APIService.Models.DrinksSales",
+        "Name": "saleDto",
+        "Type": "APIService.DTOs.SaleUpdateDTO",
         "IsRequired": true
       }
     ],
     "ReturnTypes": []
   },
   {
-    "ContainingType": "APIService.Controllers.DrinksSalesController",
-    "Method": "DeleteDrinksSales",
-    "RelativePath": "api/DrinksSales/{id}",
+    "ContainingType": "APIService.Controllers.DrinkSalesController",
+    "Method": "DeleteSaleItem",
+    "RelativePath": "api/DrinkSales/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
         "Name": "id",
-        "Type": "System.Int32",
+        "Type": "System.String",
         "IsRequired": true
       }
     ],
@@ -219,7 +219,7 @@
   },
   {
     "ContainingType": "APIService.Controllers.SuppliersController",
-    "Method": "GetSupplier",
+    "Method": "GetSuppliers",
     "RelativePath": "api/Suppliers",
     "HttpMethod": "GET",
     "IsController": true,
@@ -227,7 +227,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[APIService.Models.Supplier, APIService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[APIService.DTOs.SupplierDTO, APIService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -246,8 +246,8 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "supplier",
-        "Type": "APIService.Models.Supplier",
+        "Name": "supplierDto",
+        "Type": "APIService.DTOs.SupplierCreateDTO",
         "IsRequired": true
       }
     ],
@@ -273,13 +273,13 @@
     "Parameters": [
       {
         "Name": "id",
-        "Type": "System.Int32",
+        "Type": "System.String",
         "IsRequired": true
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "APIService.Models.Supplier",
+        "Type": "APIService.DTOs.SupplierDTO",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -299,12 +299,12 @@
     "Parameters": [
       {
         "Name": "id",
-        "Type": "System.Int32",
+        "Type": "System.String",
         "IsRequired": true
       },
       {
-        "Name": "supplier",
-        "Type": "APIService.Models.Supplier",
+        "Name": "supplierDto",
+        "Type": "APIService.DTOs.SupplierUpdateDTO",
         "IsRequired": true
       }
     ],
@@ -320,7 +320,7 @@
     "Parameters": [
       {
         "Name": "id",
-        "Type": "System.Int32",
+        "Type": "System.String",
         "IsRequired": true
       }
     ],

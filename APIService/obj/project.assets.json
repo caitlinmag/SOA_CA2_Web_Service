@@ -1685,7 +1685,7 @@
           }
         }
       },
-      "MongoDB.Bson/3.5.0": {
+      "MongoDB.Bson/3.5.2": {
         "type": "package",
         "dependencies": {
           "System.Memory": "4.5.5",
@@ -1702,12 +1702,12 @@
           }
         }
       },
-      "MongoDB.Driver/3.5.0": {
+      "MongoDB.Driver/3.5.2": {
         "type": "package",
         "dependencies": {
           "DnsClient": "1.6.1",
           "Microsoft.Extensions.Logging.Abstractions": "2.0.0",
-          "MongoDB.Bson": "3.5.0",
+          "MongoDB.Bson": "3.5.2",
           "SharpCompress": "0.30.1",
           "Snappier": "1.0.0",
           "System.Buffers": "4.5.1",
@@ -1722,19 +1722,6 @@
           "lib/net6.0/MongoDB.Driver.dll": {
             "related": ".xml"
           }
-        }
-      },
-      "MongoDB.EntityFrameworkCore/9.0.3": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.EntityFrameworkCore": "9.0.9",
-          "MongoDB.Driver": "3.5.0"
-        },
-        "compile": {
-          "lib/net8.0/MongoDB.EntityFrameworkCore.dll": {}
-        },
-        "runtime": {
-          "lib/net8.0/MongoDB.EntityFrameworkCore.dll": {}
         }
       },
       "Mono.TextTemplating/2.3.1": {
@@ -5799,10 +5786,10 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "MongoDB.Bson/3.5.0": {
-      "sha512": "JGNK6BanLDEifgkvPLqVFCPus5EDCy416pxf1dxUBRSVd3D9+NB3AvMVX190eXlk5/UXuCxpsQv7jWfNKvppBQ==",
+    "MongoDB.Bson/3.5.2": {
+      "sha512": "aTlbKclBjXi4j3AkrHiaeuKCvdoGA029VbvXJUmmsCXDz+DEfBFq6n9uOvXJu2YXcJiW9Vay1ZctY5Iu0JRXdw==",
       "type": "package",
-      "path": "mongodb.bson/3.5.0",
+      "path": "mongodb.bson/3.5.2",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -5813,15 +5800,15 @@
         "lib/net6.0/MongoDB.Bson.xml",
         "lib/netstandard2.1/MongoDB.Bson.dll",
         "lib/netstandard2.1/MongoDB.Bson.xml",
-        "mongodb.bson.3.5.0.nupkg.sha512",
+        "mongodb.bson.3.5.2.nupkg.sha512",
         "mongodb.bson.nuspec",
         "packageIcon.png"
       ]
     },
-    "MongoDB.Driver/3.5.0": {
-      "sha512": "ST90u7psyMkNNOWFgSkexsrB3kPn7Ynl2DlMFj2rJyYuc6SIxjmzu4ufy51yzM+cPVE1SvVcdb5UFobrRw6cMg==",
+    "MongoDB.Driver/3.5.2": {
+      "sha512": "Z1EW+CI18wOQqyAnhZkQXvUVXycrHoOb8/dlJzPHKFfNp9XPB6sEJJR67GUVYyB03B5xzt1RlwSyLXAx9B5+yQ==",
       "type": "package",
-      "path": "mongodb.driver/3.5.0",
+      "path": "mongodb.driver/3.5.2",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -5832,24 +5819,8 @@
         "lib/net6.0/MongoDB.Driver.xml",
         "lib/netstandard2.1/MongoDB.Driver.dll",
         "lib/netstandard2.1/MongoDB.Driver.xml",
-        "mongodb.driver.3.5.0.nupkg.sha512",
+        "mongodb.driver.3.5.2.nupkg.sha512",
         "mongodb.driver.nuspec",
-        "packageIcon.png"
-      ]
-    },
-    "MongoDB.EntityFrameworkCore/9.0.3": {
-      "sha512": "l1VxyLQKhelssOosdkV9jpjde6wbw2s2zPKl8ugYxSqMdMHCWl0e9zO8tXj8iP/S46t8xw1/zs/S3h9K0GIpwA==",
-      "type": "package",
-      "path": "mongodb.entityframeworkcore/9.0.3",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "BREAKING-CHANGES.md",
-        "LICENSE.md",
-        "README.md",
-        "lib/net8.0/MongoDB.EntityFrameworkCore.dll",
-        "mongodb.entityframeworkcore.9.0.3.nupkg.sha512",
-        "mongodb.entityframeworkcore.nuspec",
         "packageIcon.png"
       ]
     },
@@ -7129,7 +7100,7 @@
       "Microsoft.EntityFrameworkCore.InMemory >= 9.0.10",
       "Microsoft.EntityFrameworkCore.Tools >= 8.0.11",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 8.0.7",
-      "MongoDB.EntityFrameworkCore >= 9.0.3",
+      "MongoDB.Driver >= 3.5.2",
       "Swashbuckle.AspNetCore >= 6.6.2"
     ]
   },
@@ -7198,9 +7169,9 @@
             "target": "Package",
             "version": "[8.0.7, )"
           },
-          "MongoDB.EntityFrameworkCore": {
+          "MongoDB.Driver": {
             "target": "Package",
-            "version": "[9.0.3, )"
+            "version": "[3.5.2, )"
           },
           "Swashbuckle.AspNetCore": {
             "target": "Package",
