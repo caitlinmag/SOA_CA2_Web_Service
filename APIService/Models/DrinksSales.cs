@@ -11,6 +11,7 @@ namespace APIService.Models
         [BsonRepresentation(BsonType.ObjectId)]
         public string? DrinksSalesId { get; set; }
 
+        // reference to drink item collection
         public string? DrinkItemId { get; set; }
         public int Quantity { get; set; }
         public DateTime DateOfSale {  get; set; }

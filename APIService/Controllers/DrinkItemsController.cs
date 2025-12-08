@@ -42,22 +42,25 @@ namespace APIService.Controllers
 
         //GET: api/DrinkItems/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<DrinkDTO>> GetDrinkItem(string id)
+        public async Task<ActionResult<DrinkReadDTO>> GetDrinkItem(string id)
         {
-            var drinkItem = await _drinksService.GetDrinkByID(id);
+            var (drinkItem, supplier) = await _drinksService.GetDrinkRead(id);
 
             if (drinkItem == null)
             {
                 return NotFound();
             }
 
-
-            var drinkDto = new DrinkDTO
+            var drinkDto = new DrinkReadDTO
             {
                 DrinkItemId = drinkItem.DrinkItemId,
                 DrinkName = drinkItem.DrinkName,
                 DrinkType = drinkItem.DrinkType,
-                Price = drinkItem.Price
+                Price = drinkItem.Price,
+                Extras = drinkItem.Extras,
+                SupplierId = drinkItem.SupplierId,
+                SupplierName = supplier?.SupplierName,
+                Location = supplier?.Location           
             };
             return drinkDto;
         }
@@ -65,14 +68,14 @@ namespace APIService.Controllers
         // POST: api/DrinkItems
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
-        public async Task<ActionResult<DrinkItem>> PostDrinkItem(DrinkCreateDTO drinkDto)
+        public async Task<ActionResult<DrinkDTO>> PostDrinkItem(DrinkCreateDTO drinkDto)
         {
             var newDrink = new DrinkItem
             {
-                DrinkItemId = drinkDto.DrinkItemId,
                 DrinkName = drinkDto.DrinkName,
                 DrinkType = drinkDto.DrinkType,
                 Price = drinkDto.Price,
+                Extras = drinkDto.Extras,
                 SupplierId = drinkDto.SupplierId
             };
 
@@ -84,7 +87,7 @@ namespace APIService.Controllers
                 DrinkName = newDrink.DrinkName,
                 DrinkType = newDrink.DrinkType,
                 Price = newDrink.Price,
-          
+                Extras = newDrink.Extras
             };
 
             return CreatedAtAction(nameof(GetDrinkItem), new { id = created.DrinkItemId }, created);
@@ -105,6 +108,10 @@ namespace APIService.Controllers
 
             currentDrink.DrinkName = drinkDto.DrinkName;
             currentDrink.DrinkType = drinkDto.DrinkType;
+            currentDrink.Price = drinkDto.Price;
+            currentDrink.Extras = drinkDto.Extras;
+            currentDrink.SupplierId = drinkDto.SupplierId;
+
 
             await _drinksService.UpdateDrink(id, currentDrink);
 

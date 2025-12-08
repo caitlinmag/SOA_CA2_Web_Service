@@ -45,9 +45,9 @@ namespace APIService.Controllers
 
         //GET: api/DrinkItems/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<SaleDTO>> GetSale(string id)
+        public async Task<ActionResult<SaleReadDTO>> GetSale(string id)
         {
-            var sale = await _salesService.GetSaleById(id);
+            var (sale, drink) = await _salesService.GetSaleRead(id);
 
             if (sale == null)
             {
@@ -55,12 +55,15 @@ namespace APIService.Controllers
             }
 
 
-            var saleDto = new SaleDTO
+            var saleDto = new SaleReadDTO
             {
                 DrinksSalesId = sale.DrinksSalesId,
                 DrinkItemId = sale.DrinkItemId,
                 Quantity = sale.Quantity,
-                DateOfSale = sale.DateOfSale
+                DateOfSale = sale.DateOfSale,
+
+                DrinkName = drink?.DrinkName, 
+                Price = drink?.Price ?? 0,
             };
             return saleDto;
         }
