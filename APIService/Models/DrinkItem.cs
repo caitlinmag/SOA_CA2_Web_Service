@@ -18,5 +18,6 @@ namespace APIService.Models
         public string? Extras { get; set; }
 
         public string? SupplierId { get; set; }
+
     }
 }

@@ -71,17 +71,17 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/DrinkItem"
+                  "$ref": "#/components/schemas/DrinkDTO"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DrinkItem"
+                  "$ref": "#/components/schemas/DrinkDTO"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DrinkItem"
+                  "$ref": "#/components/schemas/DrinkDTO"
                 }
               }
             }
@@ -110,17 +110,17 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/DrinkDTO"
+                  "$ref": "#/components/schemas/DrinkReadDTO"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DrinkDTO"
+                  "$ref": "#/components/schemas/DrinkReadDTO"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DrinkDTO"
+                  "$ref": "#/components/schemas/DrinkReadDTO"
                 }
               }
             }
@@ -292,17 +292,17 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/SaleDTO"
+                  "$ref": "#/components/schemas/SaleReadDTO"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/SaleDTO"
+                  "$ref": "#/components/schemas/SaleReadDTO"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/SaleDTO"
+                  "$ref": "#/components/schemas/SaleReadDTO"
                 }
               }
             }
@@ -557,10 +557,6 @@
       "DrinkCreateDTO": {
         "type": "object",
         "properties": {
-          "drinkItemId": {
-            "type": "string",
-            "nullable": true
-          },
           "drinkName": {
             "type": "string",
             "nullable": true
@@ -570,8 +566,8 @@
             "nullable": true
           },
           "price": {
-            "type": "integer",
-            "format": "int32"
+            "type": "number",
+            "format": "double"
           },
           "extras": {
             "type": "string",
@@ -607,14 +603,14 @@
             "type": "string",
             "nullable": true
           },
-          "supplierName": {
+          "supplierId": {
             "type": "string",
             "nullable": true
           }
         },
         "additionalProperties": false
       },
-      "DrinkItem": {
+      "DrinkReadDTO": {
         "type": "object",
         "properties": {
           "drinkItemId": {
@@ -640,6 +636,14 @@
           "supplierId": {
             "type": "string",
             "nullable": true
+          },
+          "supplierName": {
+            "type": "string",
+            "nullable": true
+          },
+          "location": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false
@@ -660,6 +664,10 @@
             "format": "double"
           },
           "extras": {
+            "type": "string",
+            "nullable": true
+          },
+          "supplierId": {
             "type": "string",
             "nullable": true
           }
@@ -720,6 +728,36 @@
           "dateOfSale": {
             "type": "string",
             "format": "date-time"
+          }
+        },
+        "additionalProperties": false
+      },
+      "SaleReadDTO": {
+        "type": "object",
+        "properties": {
+          "drinksSalesId": {
+            "type": "string",
+            "nullable": true
+          },
+          "quantity": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "dateOfSale": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "drinkItemId": {
+            "type": "string",
+            "nullable": true
+          },
+          "drinkName": {
+            "type": "string",
+            "nullable": true
+          },
+          "price": {
+            "type": "number",
+            "format": "double"
           }
         },
         "additionalProperties": false
