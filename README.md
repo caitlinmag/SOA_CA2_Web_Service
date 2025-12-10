@@ -1,4 +1,8 @@
 # SOA_CA2_Web_Service
+MONGODB 
+Setting up my database on MongoDB Atlas I used the following tutorials:
+- https://learn.microsoft.com/en-us/aspnet/core/tutorials/first-mongo-app?view=aspnetcore-10.0&tabs=visual-studio
+- https://www.mongodb.com/docs/drivers/csharp/current/crud/restful-api-tutorial/  
 
 TABLES
 - DrinkItems, DrinkSales, Suppliers and Users
