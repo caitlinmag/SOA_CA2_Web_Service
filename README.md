@@ -5,5 +5,5 @@ TABLES
 Using MongoDB Atlas as my Database 
 
 LOGIN FEATURE
-- All drinks can be viewed without a token
-- Login is required to get drink by id, add, update, or delete a drink. 
+- Without Token: can view all data for drinks, sales and suppliers
+- Token Required: for create, update, getbyid and delete data in drinks, sales and suppliers
