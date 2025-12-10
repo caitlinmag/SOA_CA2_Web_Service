@@ -1,4 +1,6 @@
-﻿namespace APIService.DTOs
+﻿using MongoDB.Bson.Serialization.Attributes;
+
+namespace APIService.DTOs
 {
     public class DrinkCreateDTO
     {
@@ -8,6 +10,7 @@
         public string? DrinkType { get; set; }
         public double Price { get; set; }
         public string? Extras { get; set; }
+        [BsonElement("SupplierId")]
         public string? SupplierId { get; set; }
     }
 }

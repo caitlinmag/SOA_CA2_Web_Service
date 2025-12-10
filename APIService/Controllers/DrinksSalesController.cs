@@ -13,6 +13,7 @@ using System.Threading.Tasks;
 
 namespace APIService.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class DrinkSalesController : ControllerBase
@@ -26,6 +27,7 @@ namespace APIService.Controllers
         }
 
         // GET: api/DrinkItems
+        [AllowAnonymous]
         [HttpGet]
         public async Task<ActionResult<IEnumerable<SaleDTO>>> GetSales()
         {
@@ -72,7 +74,7 @@ namespace APIService.Controllers
         // POST: api/DrinkItems
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
-        public async Task<ActionResult<DrinksSales>> PostSaleItem(SaleCreateDTO saleDto)
+        public async Task<ActionResult<DrinksSales>> PostSaleItem([FromBody]SaleCreateDTO saleDto)
         {
             var newSale = new DrinksSales
             {
@@ -98,7 +100,7 @@ namespace APIService.Controllers
         //// PUT: api/DrinkItems/5
         //// To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutSalesItem(string id, SaleUpdateDTO saleDto)
+        public async Task<IActionResult> PutSalesItem(string id, [FromBody] SaleUpdateDTO saleDto)
         {
             var currentSale = await _salesService.GetSaleById(id);
 

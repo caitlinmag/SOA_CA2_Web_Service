@@ -25,6 +25,7 @@ namespace APIService.Controllers
         }
 
         // GET: api/DrinkItems
+        [AllowAnonymous]
         [HttpGet]
         public async Task<ActionResult<IEnumerable<DrinkDTO>>> GetDrinks()
         {
@@ -71,7 +72,6 @@ namespace APIService.Controllers
 
         // POST: api/DrinkItems
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-        [AllowAnonymous]
         [HttpPost]
         public async Task<ActionResult<DrinkDTO>> PostDrinkItem([FromBody]DrinkCreateDTO drinkDto)
         {
