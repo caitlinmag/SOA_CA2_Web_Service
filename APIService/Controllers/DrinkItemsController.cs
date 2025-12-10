@@ -1,16 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using APIService.Data;
+using APIService.DTOs;
+using APIService.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using APIService.Models;
-using APIService.Data;
-using APIService.DTOs;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace APIService.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class DrinkItemsController : ControllerBase { 
@@ -67,8 +69,9 @@ namespace APIService.Controllers
 
         // POST: api/DrinkItems
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
+        [AllowAnonymous]
         [HttpPost]
-        public async Task<ActionResult<DrinkDTO>> PostDrinkItem(DrinkCreateDTO drinkDto)
+        public async Task<ActionResult<DrinkDTO>> PostDrinkItem([FromBody]DrinkCreateDTO drinkDto)
         {
             var newDrink = new DrinkItem
             {
@@ -97,7 +100,7 @@ namespace APIService.Controllers
         //// PUT: api/DrinkItems/5
         //// To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutDrinkItem(string id, DrinkUpdateDTO drinkDto)
+        public async Task<IActionResult> PutDrinkItem(string id, [FromBody] DrinkUpdateDTO drinkDto)
         {
             var currentDrink = await _drinksService.GetDrinkByID(id);
 

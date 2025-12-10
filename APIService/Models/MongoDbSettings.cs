@@ -7,6 +7,7 @@
         public string DrinksCollectionName { get; set; } = "Drinks";
         public string SalesCollectionName { get; set; } = "DrinkSales";
         public string SuppliersCollectionName { get; set; } = "Suppliers";
+        public string UsersCollectionName { get; set; } = "Users";
 
     }
 }
