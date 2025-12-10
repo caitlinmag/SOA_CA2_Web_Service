@@ -1,14 +1,44 @@
-using APIService.Models;
 using APIService.Data;
-using MongoDB.Driver;
-using Microsoft.Extensions.Options;
+using APIService.Models;
 using APIService.Services;
+using APIService.UserLogin;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.Extensions.Options;
+using Microsoft.IdentityModel.Tokens;
+using MongoDB.Driver;
+using System.Configuration;
+using System.Security.Claims;
+using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+var jwtSettings = builder.Configuration
+    .GetSection("Jwt");
+var key = (jwtSettings["Key"]);
+
+//Authentication and JWT Bearer
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+    .AddJwtBearer(options =>
+    {
+        options.RequireHttpsMetadata = false;
+        options.SaveToken = true;
+        options.TokenValidationParameters = new TokenValidationParameters
+                                            {
+                                                ValidateIssuerSigningKey = true,
+                                                IssuerSigningKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(key)),
+                                                ValidateIssuer = false, 
+                                                ValidateAudience = false,
+                                                ValidateLifetime = true,
+                                            };
+    });
+
+builder.Services.AddAuthorization();
 
 builder.Services.AddControllers();
+builder.Services.Configure<JwtSettings>(builder.Configuration.GetSection("Jwt"));
+builder.Services.AddSingleton(res =>
+res.GetRequiredService<IOptions<JwtSettings>>().Value);
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -49,6 +79,17 @@ builder.Services.AddSingleton<IMongoCollection<Supplier>>(s =>
     return database.GetCollection<Supplier>(settings.SuppliersCollectionName);
 });
 
+builder.Services.AddSingleton<IMongoCollection<User>>(s =>
+{
+    var settings = s.GetRequiredService<IOptions<MongoDbSettings>>().Value;
+    var client = s.GetRequiredService<IMongoClient>();
+
+    var database = client.GetDatabase(settings.DatabaseName);
+    return database.GetCollection<User>(settings.UsersCollectionName);
+});
+
+
+builder.Services.AddSingleton<UserService>();
 builder.Services.AddSingleton<DrinksService>();
 builder.Services.AddSingleton<DrinkSaleService>();
 builder.Services.AddSingleton<SupplierService>();
@@ -64,6 +105,10 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.UseRouting();
+
+app.UseAuthentication();
 
 app.UseAuthorization();
 

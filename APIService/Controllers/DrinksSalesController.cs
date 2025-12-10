@@ -2,6 +2,7 @@
 using APIService.DTOs;
 using APIService.Models;
 using APIService.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
