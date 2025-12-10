@@ -1,6 +1,7 @@
 ﻿using APIService.DTOs;
 using APIService.Models;
 using APIService.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -11,6 +12,7 @@ using System.Threading.Tasks;
 
 namespace APIService.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class SuppliersController : ControllerBase
@@ -23,6 +25,7 @@ namespace APIService.Controllers
         }
 
         // GET: api/Suppliers
+        [AllowAnonymous]
         [HttpGet]
         public async Task<ActionResult<IEnumerable<SupplierDTO>>> GetSuppliers()
         {
@@ -66,7 +69,7 @@ namespace APIService.Controllers
         // POST: api/Suppliers
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
-        public async Task<ActionResult<Supplier>> PostSupplier(SupplierCreateDTO supplierDto)
+        public async Task<ActionResult<Supplier>> PostSupplier([FromBody] SupplierCreateDTO supplierDto)
         {
             var newSupplier = new Supplier
             {
@@ -92,7 +95,7 @@ namespace APIService.Controllers
         // PUT: api/Suppliers/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutSupplier(string id, SupplierUpdateDTO supplierDto)
+        public async Task<IActionResult> PutSupplier(string id, [FromBody] SupplierUpdateDTO supplierDto)
         {
             var currentSupplier = await _supplierService.GetSupplierById(id);
 
