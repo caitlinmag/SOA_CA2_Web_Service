@@ -7,6 +7,14 @@
       "RelativeMoniker": "D:0:0:{C03EDC59-EC52-C71B-2E11-290D8C155935}|APIService.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{C03EDC59-EC52-C71B-2E11-290D8C155935}|APIService.csproj|c:\\users\\caitl\\documents\\dev\\soa_ca2_web_service\\apiservice\\models\\mongodbsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C03EDC59-EC52-C71B-2E11-290D8C155935}|APIService.csproj|solutionrelative:models\\mongodbsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C03EDC59-EC52-C71B-2E11-290D8C155935}|APIService.csproj|c:\\users\\caitl\\documents\\dev\\soa_ca2_web_service\\apiservice\\controllers\\drinkssalescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C03EDC59-EC52-C71B-2E11-290D8C155935}|APIService.csproj|solutionrelative:controllers\\drinkssalescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{C03EDC59-EC52-C71B-2E11-290D8C155935}|APIService.csproj|c:\\users\\caitl\\documents\\dev\\soa_ca2_web_service\\apiservice\\services\\drinksservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C03EDC59-EC52-C71B-2E11-290D8C155935}|APIService.csproj|solutionrelative:services\\drinksservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -19,16 +27,8 @@
       "RelativeMoniker": "D:0:0:{C03EDC59-EC52-C71B-2E11-290D8C155935}|APIService.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C03EDC59-EC52-C71B-2E11-290D8C155935}|APIService.csproj|c:\\users\\caitl\\documents\\dev\\soa_ca2_web_service\\apiservice\\models\\mongodbsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C03EDC59-EC52-C71B-2E11-290D8C155935}|APIService.csproj|solutionrelative:models\\mongodbsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{C03EDC59-EC52-C71B-2E11-290D8C155935}|APIService.csproj|c:\\users\\caitl\\documents\\dev\\soa_ca2_web_service\\apiservice\\userlogin\\jwtsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C03EDC59-EC52-C71B-2E11-290D8C155935}|APIService.csproj|solutionrelative:userlogin\\jwtsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C03EDC59-EC52-C71B-2E11-290D8C155935}|APIService.csproj|c:\\users\\caitl\\documents\\dev\\soa_ca2_web_service\\apiservice\\controllers\\drinkssalescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C03EDC59-EC52-C71B-2E11-290D8C155935}|APIService.csproj|solutionrelative:controllers\\drinkssalescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C03EDC59-EC52-C71B-2E11-290D8C155935}|APIService.csproj|c:\\users\\caitl\\documents\\dev\\soa_ca2_web_service\\apiservice\\services\\supplierservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -41,10 +41,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{C03EDC59-EC52-C71B-2E11-290D8C155935}|APIService.csproj|c:\\users\\caitl\\documents\\dev\\soa_ca2_web_service\\apiservice\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C03EDC59-EC52-C71B-2E11-290D8C155935}|APIService.csproj|solutionrelative:services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C03EDC59-EC52-C71B-2E11-290D8C155935}|APIService.csproj|c:\\users\\caitl\\documents\\dev\\soa_ca2_web_service\\apiservice\\services\\drinksaleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C03EDC59-EC52-C71B-2E11-290D8C155935}|APIService.csproj|solutionrelative:services\\drinksaleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C03EDC59-EC52-C71B-2E11-290D8C155935}|APIService.csproj|c:\\users\\caitl\\documents\\dev\\soa_ca2_web_service\\apiservice\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -102,11 +98,50 @@
       "DocumentGroups": [
         {
           "DockedWidth": 57,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
+              "Title": "MongoDbSettings.cs",
+              "DocumentMoniker": "C:\\Users\\caitl\\Documents\\dev\\SOA_CA2_Web_Service\\APIService\\Models\\MongoDbSettings.cs",
+              "RelativeDocumentMoniker": "Models\\MongoDbSettings.cs",
+              "ToolTip": "C:\\Users\\caitl\\Documents\\dev\\SOA_CA2_Web_Service\\APIService\\Models\\MongoDbSettings.cs",
+              "RelativeToolTip": "Models\\MongoDbSettings.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAIAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-09T21:11:04.978Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DrinksService.cs",
+              "DocumentMoniker": "C:\\Users\\caitl\\Documents\\dev\\SOA_CA2_Web_Service\\APIService\\Services\\DrinksService.cs",
+              "RelativeDocumentMoniker": "Services\\DrinksService.cs",
+              "ToolTip": "C:\\Users\\caitl\\Documents\\dev\\SOA_CA2_Web_Service\\APIService\\Services\\DrinksService.cs",
+              "RelativeToolTip": "Services\\DrinksService.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAA+wBwAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-09T21:49:29.697Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\caitl\\Documents\\dev\\SOA_CA2_Web_Service\\APIService\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\caitl\\Documents\\dev\\SOA_CA2_Web_Service\\APIService\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-12-09T19:15:53.464Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "DrinkItemsController.cs",
               "DocumentMoniker": "C:\\Users\\caitl\\Documents\\dev\\SOA_CA2_Web_Service\\APIService\\Controllers\\DrinkItemsController.cs",
               "RelativeDocumentMoniker": "Controllers\\DrinkItemsController.cs",
@@ -115,6 +150,19 @@
               "ViewState": "AgIAAEQAAAAAAAAAAAAgwFkAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-10T13:20:23.958Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DrinksSalesController.cs",
+              "DocumentMoniker": "C:\\Users\\caitl\\Documents\\dev\\SOA_CA2_Web_Service\\APIService\\Controllers\\DrinksSalesController.cs",
+              "RelativeDocumentMoniker": "Controllers\\DrinksSalesController.cs",
+              "ToolTip": "C:\\Users\\caitl\\Documents\\dev\\SOA_CA2_Web_Service\\APIService\\Controllers\\DrinksSalesController.cs",
+              "RelativeToolTip": "Controllers\\DrinksSalesController.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAHMAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-07T18:25:49.13Z",
               "EditorCaption": ""
             },
             {
@@ -132,46 +180,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "MongoDbSettings.cs",
-              "DocumentMoniker": "C:\\Users\\caitl\\Documents\\dev\\SOA_CA2_Web_Service\\APIService\\Models\\MongoDbSettings.cs",
-              "RelativeDocumentMoniker": "Models\\MongoDbSettings.cs",
-              "ToolTip": "C:\\Users\\caitl\\Documents\\dev\\SOA_CA2_Web_Service\\APIService\\Models\\MongoDbSettings.cs",
-              "RelativeToolTip": "Models\\MongoDbSettings.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAIAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-09T21:11:04.978Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "DrinksService.cs",
-              "DocumentMoniker": "C:\\Users\\caitl\\Documents\\dev\\SOA_CA2_Web_Service\\APIService\\Services\\DrinksService.cs",
-              "RelativeDocumentMoniker": "Services\\DrinksService.cs",
-              "ToolTip": "C:\\Users\\caitl\\Documents\\dev\\SOA_CA2_Web_Service\\APIService\\Services\\DrinksService.cs",
-              "RelativeToolTip": "Services\\DrinksService.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAA+wBwAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-09T21:49:29.697Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\caitl\\Documents\\dev\\SOA_CA2_Web_Service\\APIService\\appsettings.json",
-              "RelativeDocumentMoniker": "appsettings.json",
-              "ToolTip": "C:\\Users\\caitl\\Documents\\dev\\SOA_CA2_Web_Service\\APIService\\appsettings.json*",
-              "RelativeToolTip": "appsettings.json*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-12-09T19:15:53.464Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "JwtSettings.cs",
               "DocumentMoniker": "C:\\Users\\caitl\\Documents\\dev\\SOA_CA2_Web_Service\\APIService\\UserLogin\\JwtSettings.cs",
               "RelativeDocumentMoniker": "UserLogin\\JwtSettings.cs",
@@ -184,7 +193,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\caitl\\Documents\\dev\\SOA_CA2_Web_Service\\APIService\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -193,19 +202,6 @@
               "ViewState": "AgIAAC8AAAAAAAAAAAAqwDMAAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-10T12:53:16.297Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "DrinksSalesController.cs",
-              "DocumentMoniker": "C:\\Users\\caitl\\Documents\\dev\\SOA_CA2_Web_Service\\APIService\\Controllers\\DrinksSalesController.cs",
-              "RelativeDocumentMoniker": "Controllers\\DrinksSalesController.cs",
-              "ToolTip": "C:\\Users\\caitl\\Documents\\dev\\SOA_CA2_Web_Service\\APIService\\Controllers\\DrinksSalesController.cs",
-              "RelativeToolTip": "Controllers\\DrinksSalesController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHMAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-07T18:25:49.13Z",
               "EditorCaption": ""
             },
             {
@@ -237,19 +233,6 @@
             {
               "$type": "Document",
               "DocumentIndex": 10,
-              "Title": "DrinkSaleService.cs",
-              "DocumentMoniker": "C:\\Users\\caitl\\Documents\\dev\\SOA_CA2_Web_Service\\APIService\\Services\\DrinkSaleService.cs",
-              "RelativeDocumentMoniker": "Services\\DrinkSaleService.cs",
-              "ToolTip": "C:\\Users\\caitl\\Documents\\dev\\SOA_CA2_Web_Service\\APIService\\Services\\DrinkSaleService.cs",
-              "RelativeToolTip": "Services\\DrinkSaleService.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAQwB0AAABFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-09T21:49:31.685Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
               "Title": "User.cs",
               "DocumentMoniker": "C:\\Users\\caitl\\Documents\\dev\\SOA_CA2_Web_Service\\APIService\\Models\\User.cs",
               "RelativeDocumentMoniker": "Models\\User.cs",
@@ -262,7 +245,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 11,
               "Title": "SuppliersController.cs",
               "DocumentMoniker": "C:\\Users\\caitl\\Documents\\dev\\SOA_CA2_Web_Service\\APIService\\Controllers\\SuppliersController.cs",
               "RelativeDocumentMoniker": "Controllers\\SuppliersController.cs",
@@ -275,7 +258,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 13,
               "Title": "DrinkDTO.cs",
               "DocumentMoniker": "C:\\Users\\caitl\\Documents\\dev\\SOA_CA2_Web_Service\\APIService\\DTOs\\DrinkDTO.cs",
               "RelativeDocumentMoniker": "DTOs\\DrinkDTO.cs",
@@ -288,7 +271,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 12,
               "Title": "LoginDTO.cs",
               "DocumentMoniker": "C:\\Users\\caitl\\Documents\\dev\\SOA_CA2_Web_Service\\APIService\\DTOs\\LoginDTO.cs",
               "RelativeDocumentMoniker": "DTOs\\LoginDTO.cs",
@@ -301,7 +284,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 14,
               "Title": "DrinkReadDTO.cs",
               "DocumentMoniker": "C:\\Users\\caitl\\Documents\\dev\\SOA_CA2_Web_Service\\APIService\\DTOs\\DrinkReadDTO.cs",
               "RelativeDocumentMoniker": "DTOs\\DrinkReadDTO.cs",
@@ -314,7 +297,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 15,
               "Title": "DrinkItem.cs",
               "DocumentMoniker": "C:\\Users\\caitl\\Documents\\dev\\SOA_CA2_Web_Service\\APIService\\Models\\DrinkItem.cs",
               "RelativeDocumentMoniker": "Models\\DrinkItem.cs",
@@ -327,7 +310,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 16,
               "Title": "DrinksSales.cs",
               "DocumentMoniker": "C:\\Users\\caitl\\Documents\\dev\\SOA_CA2_Web_Service\\APIService\\Models\\DrinksSales.cs",
               "RelativeDocumentMoniker": "Models\\DrinksSales.cs",
@@ -339,7 +322,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 17,
               "Title": "MongoClient.cs",
               "DocumentMoniker": "C:\\Users\\caitl\\Documents\\dev\\SOA_CA2_Web_Service\\APIService\\MongoClient.cs",
               "RelativeDocumentMoniker": "MongoClient.cs",
@@ -351,7 +334,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 18,
               "Title": "SupplierUpdateDTO.cs",
               "DocumentMoniker": "C:\\Users\\caitl\\Documents\\dev\\SOA_CA2_Web_Service\\APIService\\DTOs\\SupplierUpdateDTO.cs",
               "RelativeDocumentMoniker": "DTOs\\SupplierUpdateDTO.cs",
@@ -363,7 +346,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 19,
               "Title": "SupplierCreateDTO.cs",
               "DocumentMoniker": "C:\\Users\\caitl\\Documents\\dev\\SOA_CA2_Web_Service\\APIService\\DTOs\\SupplierCreateDTO.cs",
               "RelativeDocumentMoniker": "DTOs\\SupplierCreateDTO.cs",
@@ -375,7 +358,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 20,
               "Title": "SaleCreateDTO.cs",
               "DocumentMoniker": "C:\\Users\\caitl\\Documents\\dev\\SOA_CA2_Web_Service\\APIService\\DTOs\\SaleCreateDTO.cs",
               "RelativeDocumentMoniker": "DTOs\\SaleCreateDTO.cs",
@@ -387,7 +370,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 21,
               "Title": "SaleUpdateDTO.cs",
               "DocumentMoniker": "C:\\Users\\caitl\\Documents\\dev\\SOA_CA2_Web_Service\\APIService\\DTOs\\SaleUpdateDTO.cs",
               "RelativeDocumentMoniker": "DTOs\\SaleUpdateDTO.cs",

@@ -35,7 +35,9 @@ namespace APIService.Controllers
                 DrinkItemId = drink.DrinkItemId,
                 DrinkName = drink.DrinkName,
                 DrinkType = drink.DrinkType,
-                Price = drink.Price
+                Price = drink.Price,
+                Extras = drink.Extras, 
+                SupplierId = drink.SupplierId
             }).ToList();
 
             return drinksDtos;
