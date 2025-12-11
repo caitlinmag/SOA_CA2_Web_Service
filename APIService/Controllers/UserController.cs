@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using APIService.Services;
 using Microsoft.AspNetCore.Identity.Data;
 using Microsoft.AspNetCore.Authorization;
+using APIService.Interfaces;
 
 namespace APIService.Controllers
 {
@@ -19,9 +20,9 @@ namespace APIService.Controllers
     public class UserController : ControllerBase
     {
         private readonly JwtSettings _jwtSettings;
-        private readonly UserService _userService;
+        private readonly IUserService _userService;
 
-        public UserController(JwtSettings jwtSettings, UserService userService)
+        public UserController(JwtSettings jwtSettings, IUserService userService)
         {
             _jwtSettings = jwtSettings;
             _userService = userService;

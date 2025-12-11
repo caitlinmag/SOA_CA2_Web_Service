@@ -1,4 +1,5 @@
 ﻿using APIService.DTOs;
+using APIService.Interfaces;
 using APIService.Models;
 using APIService.Services;
 using Microsoft.AspNetCore.Authorization;
@@ -17,9 +18,9 @@ namespace APIService.Controllers
     [ApiController]
     public class SuppliersController : ControllerBase
     {
-        private readonly SupplierService _supplierService;
+        private readonly ISupplierService _supplierService;
 
-        public SuppliersController(SupplierService supplierService)
+        public SuppliersController(ISupplierService supplierService)
         {
            _supplierService = supplierService;
         }

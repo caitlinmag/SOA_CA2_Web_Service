@@ -1,9 +1,10 @@
-﻿using APIService.Models;
+﻿using APIService.Interfaces;
+using APIService.Models;
 using MongoDB.Driver;
 
 namespace APIService.Services
 {
-    public class DrinkSaleService
+    public class DrinkSaleService : IDrinkSalesService
     {
 
         private readonly IMongoCollection<DrinksSales> _salesCollection;

@@ -1,4 +1,5 @@
 using APIService.Data;
+using APIService.Interfaces;
 using APIService.Models;
 using APIService.Services;
 using APIService.UserLogin;
@@ -89,10 +90,10 @@ builder.Services.AddSingleton<IMongoCollection<User>>(s =>
 });
 
 
-builder.Services.AddSingleton<UserService>();
-builder.Services.AddSingleton<DrinksService>();
-builder.Services.AddSingleton<DrinkSaleService>();
-builder.Services.AddSingleton<SupplierService>();
+builder.Services.AddSingleton<IUserService, UserService>();
+builder.Services.AddSingleton<IDrinksService, DrinksService>();
+builder.Services.AddSingleton<IDrinkSalesService, DrinkSaleService>();
+builder.Services.AddSingleton<ISupplierService, SupplierService>();
 
 
 var app = builder.Build();

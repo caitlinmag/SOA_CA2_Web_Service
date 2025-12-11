@@ -1,9 +1,10 @@
-﻿using APIService.Models;
+﻿using APIService.Interfaces;
+using APIService.Models;
 using MongoDB.Driver;
 
 namespace APIService.Services
 {
-    public class SupplierService
+    public class SupplierService: ISupplierService
     {
 
         private readonly IMongoCollection<Supplier> _supplierCollection;
