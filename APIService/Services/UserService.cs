@@ -1,4 +1,5 @@
-﻿using APIService.Models;
+﻿using APIService.Interfaces;
+using APIService.Models;
 using APIService.UserLogin;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.IdentityModel.Tokens;
@@ -10,7 +11,7 @@ using System.Text;
 
 namespace APIService.Services
 {
-    public class UserService
+    public class UserService: IUserService
     {
         private readonly IMongoCollection<User> _usersCollection;
         private readonly JwtSettings _jwtSettings;

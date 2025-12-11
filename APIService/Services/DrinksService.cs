@@ -5,10 +5,11 @@ using MongoDB.Bson;
 using APIService.Models;
 using System.Formats.Asn1;
 using Microsoft.AspNetCore.Mvc;
+using APIService.Interfaces;
 
 namespace APIService.Data
 {
-    public class DrinksService
+    public class DrinksService: IDrinksService
     {
         private readonly IMongoCollection<DrinkItem> _drinksCollection;
         private readonly IMongoCollection<Supplier> _supplierCollection;

@@ -1,5 +1,6 @@
 ﻿using APIService.Data;
 using APIService.DTOs;
+using APIService.Interfaces;
 using APIService.Models;
 using APIService.Services;
 using Microsoft.AspNetCore.Authorization;
@@ -19,9 +20,9 @@ namespace APIService.Controllers
     public class DrinkSalesController : ControllerBase
     {
     
-        private readonly DrinkSaleService _salesService;
+        private readonly IDrinkSalesService _salesService;
 
-        public DrinkSalesController(DrinkSaleService salesService)
+        public DrinkSalesController(IDrinkSalesService salesService)
         {
             _salesService = salesService;
         }
