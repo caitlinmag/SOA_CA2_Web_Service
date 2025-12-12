@@ -259,3 +259,5 @@ C:\Users\caitl\Documents\dev\SOA_CA2_Web_Service\APIService\obj\Debug\net8.0\ref
 C:\Users\caitl\Documents\dev\SOA_CA2_Web_Service\APIService\obj\Debug\net8.0\APIService.pdb
 C:\Users\caitl\Documents\dev\SOA_CA2_Web_Service\APIService\obj\Debug\net8.0\APIService.genruntimeconfig.cache
 C:\Users\caitl\Documents\dev\SOA_CA2_Web_Service\APIService\obj\Debug\net8.0\ref\APIService.dll
+C:\Users\caitl\Documents\dev\SOA_CA2_Web_Service\APIService\bin\Debug\net8.0\Castle.Core.dll
+C:\Users\caitl\Documents\dev\SOA_CA2_Web_Service\APIService\bin\Debug\net8.0\Moq.dll
