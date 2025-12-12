@@ -3,6 +3,27 @@
   "WorkspaceRootPath": "C:\\Users\\caitl\\Documents\\dev\\SOA_CA2_Web_Service\\APIService\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{762A2AB2-4C5A-4543-851B-7821F4EEA443}|..\\SOA_CA2_Web_Service.UnitTests\\SOA_CA2_Web_Service.UnitTests.csproj|c:\\users\\caitl\\documents\\dev\\soa_ca2_web_service\\soa_ca2_web_service.unittests\\drinksservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C03EDC59-EC52-C71B-2E11-290D8C155935}|APIService.csproj|c:\\users\\caitl\\documents\\dev\\soa_ca2_web_service\\apiservice\\interfaces\\idrinksservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C03EDC59-EC52-C71B-2E11-290D8C155935}|APIService.csproj|solutionrelative:interfaces\\idrinksservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{762A2AB2-4C5A-4543-851B-7821F4EEA443}|..\\SOA_CA2_Web_Service.UnitTests\\SOA_CA2_Web_Service.UnitTests.csproj|c:\\users\\caitl\\documents\\dev\\soa_ca2_web_service\\soa_ca2_web_service.unittests\\salesservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C03EDC59-EC52-C71B-2E11-290D8C155935}|APIService.csproj|c:\\users\\caitl\\documents\\dev\\soa_ca2_web_service\\apiservice\\services\\drinksservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C03EDC59-EC52-C71B-2E11-290D8C155935}|APIService.csproj|solutionrelative:services\\drinksservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{762A2AB2-4C5A-4543-851B-7821F4EEA443}|..\\SOA_CA2_Web_Service.UnitTests\\SOA_CA2_Web_Service.UnitTests.csproj|c:\\users\\caitl\\documents\\dev\\soa_ca2_web_service\\soa_ca2_web_service.unittests\\usertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C03EDC59-EC52-C71B-2E11-290D8C155935}|APIService.csproj|c:\\users\\caitl\\documents\\dev\\soa_ca2_web_service\\apiservice\\models\\drinkitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C03EDC59-EC52-C71B-2E11-290D8C155935}|APIService.csproj|solutionrelative:models\\drinkitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{C03EDC59-EC52-C71B-2E11-290D8C155935}|APIService.csproj|c:\\users\\caitl\\documents\\dev\\soa_ca2_web_service\\apiservice\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C03EDC59-EC52-C71B-2E11-290D8C155935}|APIService.csproj|solutionrelative:controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -15,15 +36,8 @@
       "RelativeMoniker": "D:0:0:{C03EDC59-EC52-C71B-2E11-290D8C155935}|APIService.csproj|solutionrelative:controllers\\drinkssalescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C03EDC59-EC52-C71B-2E11-290D8C155935}|APIService.csproj|c:\\users\\caitl\\documents\\dev\\soa_ca2_web_service\\apiservice\\interfaces\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C03EDC59-EC52-C71B-2E11-290D8C155935}|APIService.csproj|solutionrelative:interfaces\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{C03EDC59-EC52-C71B-2E11-290D8C155935}|APIService.csproj|c:\\users\\caitl\\documents\\dev\\soa_ca2_web_service\\apiservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C03EDC59-EC52-C71B-2E11-290D8C155935}|APIService.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{762A2AB2-4C5A-4543-851B-7821F4EEA443}|..\\SOA_CA2_Web_Service.UnitTests\\SOA_CA2_Web_Service.UnitTests.csproj|c:\\users\\caitl\\documents\\dev\\soa_ca2_web_service\\soa_ca2_web_service.unittests\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C03EDC59-EC52-C71B-2E11-290D8C155935}|APIService.csproj|c:\\users\\caitl\\documents\\dev\\soa_ca2_web_service\\apiservice\\dtos\\salereaddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -44,14 +58,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{C03EDC59-EC52-C71B-2E11-290D8C155935}|APIService.csproj|c:\\users\\caitl\\documents\\dev\\soa_ca2_web_service\\apiservice\\dtos\\drinkupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C03EDC59-EC52-C71B-2E11-290D8C155935}|APIService.csproj|solutionrelative:dtos\\drinkupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C03EDC59-EC52-C71B-2E11-290D8C155935}|APIService.csproj|c:\\users\\caitl\\documents\\dev\\soa_ca2_web_service\\apiservice\\models\\drinkitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C03EDC59-EC52-C71B-2E11-290D8C155935}|APIService.csproj|solutionrelative:models\\drinkitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C03EDC59-EC52-C71B-2E11-290D8C155935}|APIService.csproj|c:\\users\\caitl\\documents\\dev\\soa_ca2_web_service\\apiservice\\models\\drinkssales.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C03EDC59-EC52-C71B-2E11-290D8C155935}|APIService.csproj|solutionrelative:models\\drinkssales.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C03EDC59-EC52-C71B-2E11-290D8C155935}|APIService.csproj|c:\\users\\caitl\\documents\\dev\\soa_ca2_web_service\\apiservice\\dtos\\supplierupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -81,52 +87,52 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "DrinkItemsController.cs",
-              "DocumentMoniker": "C:\\Users\\caitl\\Documents\\dev\\SOA_CA2_Web_Service\\APIService\\Controllers\\DrinkItemsController.cs",
-              "RelativeDocumentMoniker": "Controllers\\DrinkItemsController.cs",
-              "ToolTip": "C:\\Users\\caitl\\Documents\\dev\\SOA_CA2_Web_Service\\APIService\\Controllers\\DrinkItemsController.cs",
-              "RelativeToolTip": "Controllers\\DrinkItemsController.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-11T18:29:28.938Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "DrinksSalesController.cs",
-              "DocumentMoniker": "C:\\Users\\caitl\\Documents\\dev\\SOA_CA2_Web_Service\\APIService\\Controllers\\DrinksSalesController.cs",
-              "RelativeDocumentMoniker": "Controllers\\DrinksSalesController.cs",
-              "ToolTip": "C:\\Users\\caitl\\Documents\\dev\\SOA_CA2_Web_Service\\APIService\\Controllers\\DrinksSalesController.cs",
-              "RelativeToolTip": "Controllers\\DrinksSalesController.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAABYAAAA6AAAAAAAAAA==",
+              "Title": "SalesServiceTests.cs",
+              "DocumentMoniker": "C:\\Users\\caitl\\Documents\\dev\\SOA_CA2_Web_Service\\SOA_CA2_Web_Service.UnitTests\\SalesServiceTests.cs",
+              "RelativeDocumentMoniker": "..\\SOA_CA2_Web_Service.UnitTests\\SalesServiceTests.cs",
+              "ToolTip": "C:\\Users\\caitl\\Documents\\dev\\SOA_CA2_Web_Service\\SOA_CA2_Web_Service.UnitTests\\SalesServiceTests.cs",
+              "RelativeToolTip": "..\\SOA_CA2_Web_Service.UnitTests\\SalesServiceTests.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-11T18:29:19.546Z",
+              "WhenOpened": "2025-12-12T20:53:30.863Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "IUserService.cs",
-              "DocumentMoniker": "C:\\Users\\caitl\\Documents\\dev\\SOA_CA2_Web_Service\\APIService\\Interfaces\\IUserService.cs",
-              "RelativeDocumentMoniker": "Interfaces\\IUserService.cs",
-              "ToolTip": "C:\\Users\\caitl\\Documents\\dev\\SOA_CA2_Web_Service\\APIService\\Interfaces\\IUserService.cs",
-              "RelativeToolTip": "Interfaces\\IUserService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAhAAAAAAAAAA==",
+              "Title": "DrinksService.cs",
+              "DocumentMoniker": "C:\\Users\\caitl\\Documents\\dev\\SOA_CA2_Web_Service\\APIService\\Services\\DrinksService.cs",
+              "RelativeDocumentMoniker": "Services\\DrinksService.cs",
+              "ToolTip": "C:\\Users\\caitl\\Documents\\dev\\SOA_CA2_Web_Service\\APIService\\Services\\DrinksService.cs",
+              "RelativeToolTip": "Services\\DrinksService.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAAAAcAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-11T18:23:11.277Z",
+              "WhenOpened": "2025-12-12T20:34:52.1Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "DrinksServiceTests.cs",
+              "DocumentMoniker": "C:\\Users\\caitl\\Documents\\dev\\SOA_CA2_Web_Service\\SOA_CA2_Web_Service.UnitTests\\DrinksServiceTests.cs",
+              "RelativeDocumentMoniker": "..\\SOA_CA2_Web_Service.UnitTests\\DrinksServiceTests.cs",
+              "ToolTip": "C:\\Users\\caitl\\Documents\\dev\\SOA_CA2_Web_Service\\SOA_CA2_Web_Service.UnitTests\\DrinksServiceTests.cs",
+              "RelativeToolTip": "..\\SOA_CA2_Web_Service.UnitTests\\DrinksServiceTests.cs",
+              "ViewState": "AgIAADgAAAAAAAAAAAAqwEQAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-12T20:16:19.4Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "UserController.cs",
               "DocumentMoniker": "C:\\Users\\caitl\\Documents\\dev\\SOA_CA2_Web_Service\\APIService\\Controllers\\UserController.cs",
               "RelativeDocumentMoniker": "Controllers\\UserController.cs",
               "ToolTip": "C:\\Users\\caitl\\Documents\\dev\\SOA_CA2_Web_Service\\APIService\\Controllers\\UserController.cs",
               "RelativeToolTip": "Controllers\\UserController.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAAB0AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAADYAAAAAAAAAAAAswD0AAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-11T18:22:16.051Z",
               "EditorCaption": ""
@@ -134,19 +140,58 @@
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "UnitTest1.cs",
-              "DocumentMoniker": "C:\\Users\\caitl\\Documents\\dev\\SOA_CA2_Web_Service\\SOA_CA2_Web_Service.UnitTests\\UnitTest1.cs",
-              "RelativeDocumentMoniker": "..\\SOA_CA2_Web_Service.UnitTests\\UnitTest1.cs",
-              "ToolTip": "C:\\Users\\caitl\\Documents\\dev\\SOA_CA2_Web_Service\\SOA_CA2_Web_Service.UnitTests\\UnitTest1.cs",
-              "RelativeToolTip": "..\\SOA_CA2_Web_Service.UnitTests\\UnitTest1.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Title": "DrinkItem.cs",
+              "DocumentMoniker": "C:\\Users\\caitl\\Documents\\dev\\SOA_CA2_Web_Service\\APIService\\Models\\DrinkItem.cs",
+              "RelativeDocumentMoniker": "Models\\DrinkItem.cs",
+              "ToolTip": "C:\\Users\\caitl\\Documents\\dev\\SOA_CA2_Web_Service\\APIService\\Models\\DrinkItem.cs",
+              "RelativeToolTip": "Models\\DrinkItem.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-11T10:04:24.153Z",
+              "WhenOpened": "2025-12-10T11:37:56.225Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "DrinkItemsController.cs",
+              "DocumentMoniker": "C:\\Users\\caitl\\Documents\\dev\\SOA_CA2_Web_Service\\APIService\\Controllers\\DrinkItemsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\DrinkItemsController.cs",
+              "ToolTip": "C:\\Users\\caitl\\Documents\\dev\\SOA_CA2_Web_Service\\APIService\\Controllers\\DrinkItemsController.cs",
+              "RelativeToolTip": "Controllers\\DrinkItemsController.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T18:29:28.938Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
+              "Title": "UserTests.cs",
+              "DocumentMoniker": "C:\\Users\\caitl\\Documents\\dev\\SOA_CA2_Web_Service\\SOA_CA2_Web_Service.UnitTests\\UserTests.cs",
+              "RelativeDocumentMoniker": "..\\SOA_CA2_Web_Service.UnitTests\\UserTests.cs",
+              "ToolTip": "C:\\Users\\caitl\\Documents\\dev\\SOA_CA2_Web_Service\\SOA_CA2_Web_Service.UnitTests\\UserTests.cs",
+              "RelativeToolTip": "..\\SOA_CA2_Web_Service.UnitTests\\UserTests.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAawBYAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-12T20:16:18.833Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "DrinksSalesController.cs",
+              "DocumentMoniker": "C:\\Users\\caitl\\Documents\\dev\\SOA_CA2_Web_Service\\APIService\\Controllers\\DrinksSalesController.cs",
+              "RelativeDocumentMoniker": "Controllers\\DrinksSalesController.cs",
+              "ToolTip": "C:\\Users\\caitl\\Documents\\dev\\SOA_CA2_Web_Service\\APIService\\Controllers\\DrinksSalesController.cs",
+              "RelativeToolTip": "Controllers\\DrinksSalesController.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAIBJwBYAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T18:29:19.546Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\caitl\\Documents\\dev\\SOA_CA2_Web_Service\\APIService\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -159,7 +204,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 11,
               "Title": "SaleDTO.cs",
               "DocumentMoniker": "C:\\Users\\caitl\\Documents\\dev\\SOA_CA2_Web_Service\\APIService\\DTOs\\SaleDTO.cs",
               "RelativeDocumentMoniker": "DTOs\\SaleDTO.cs",
@@ -167,11 +212,12 @@
               "RelativeToolTip": "DTOs\\SaleDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-10T18:32:05.077Z"
+              "WhenOpened": "2025-12-10T18:32:05.077Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 12,
               "Title": "DrinkCreateDTO.cs",
               "DocumentMoniker": "C:\\Users\\caitl\\Documents\\dev\\SOA_CA2_Web_Service\\APIService\\DTOs\\DrinkCreateDTO.cs",
               "RelativeDocumentMoniker": "DTOs\\DrinkCreateDTO.cs",
@@ -179,11 +225,12 @@
               "RelativeToolTip": "DTOs\\DrinkCreateDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-10T16:53:41.481Z"
+              "WhenOpened": "2025-12-10T16:53:41.481Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 10,
               "Title": "SaleReadDTO.cs",
               "DocumentMoniker": "C:\\Users\\caitl\\Documents\\dev\\SOA_CA2_Web_Service\\APIService\\DTOs\\SaleReadDTO.cs",
               "RelativeDocumentMoniker": "DTOs\\SaleReadDTO.cs",
@@ -191,11 +238,12 @@
               "RelativeToolTip": "DTOs\\SaleReadDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-10T18:32:24.957Z"
+              "WhenOpened": "2025-12-10T18:32:24.957Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 14,
               "Title": "DrinkUpdateDTO.cs",
               "DocumentMoniker": "C:\\Users\\caitl\\Documents\\dev\\SOA_CA2_Web_Service\\APIService\\DTOs\\DrinkUpdateDTO.cs",
               "RelativeDocumentMoniker": "DTOs\\DrinkUpdateDTO.cs",
@@ -203,11 +251,12 @@
               "RelativeToolTip": "DTOs\\DrinkUpdateDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-10T16:55:36.946Z"
+              "WhenOpened": "2025-12-10T16:55:36.946Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 13,
               "Title": "DrinkDTO.cs",
               "DocumentMoniker": "C:\\Users\\caitl\\Documents\\dev\\SOA_CA2_Web_Service\\APIService\\DTOs\\DrinkDTO.cs",
               "RelativeDocumentMoniker": "DTOs\\DrinkDTO.cs",
@@ -215,35 +264,12 @@
               "RelativeToolTip": "DTOs\\DrinkDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-10T11:38:35.318Z"
+              "WhenOpened": "2025-12-10T11:38:35.318Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "DrinkItem.cs",
-              "DocumentMoniker": "C:\\Users\\caitl\\Documents\\dev\\SOA_CA2_Web_Service\\APIService\\Models\\DrinkItem.cs",
-              "RelativeDocumentMoniker": "Models\\DrinkItem.cs",
-              "ToolTip": "C:\\Users\\caitl\\Documents\\dev\\SOA_CA2_Web_Service\\APIService\\Models\\DrinkItem.cs",
-              "RelativeToolTip": "Models\\DrinkItem.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAuAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-10T11:37:56.225Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "DrinksSales.cs",
-              "DocumentMoniker": "C:\\Users\\caitl\\Documents\\dev\\SOA_CA2_Web_Service\\APIService\\Models\\DrinksSales.cs",
-              "RelativeDocumentMoniker": "Models\\DrinksSales.cs",
-              "ToolTip": "C:\\Users\\caitl\\Documents\\dev\\SOA_CA2_Web_Service\\APIService\\Models\\DrinksSales.cs",
-              "RelativeToolTip": "Models\\DrinksSales.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAvAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-09T21:11:06.548Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 15,
               "Title": "SupplierUpdateDTO.cs",
               "DocumentMoniker": "C:\\Users\\caitl\\Documents\\dev\\SOA_CA2_Web_Service\\APIService\\DTOs\\SupplierUpdateDTO.cs",
               "RelativeDocumentMoniker": "DTOs\\SupplierUpdateDTO.cs",
@@ -251,11 +277,12 @@
               "RelativeToolTip": "DTOs\\SupplierUpdateDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-07T18:04:00.36Z"
+              "WhenOpened": "2025-12-07T18:04:00.36Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 16,
               "Title": "SupplierCreateDTO.cs",
               "DocumentMoniker": "C:\\Users\\caitl\\Documents\\dev\\SOA_CA2_Web_Service\\APIService\\DTOs\\SupplierCreateDTO.cs",
               "RelativeDocumentMoniker": "DTOs\\SupplierCreateDTO.cs",
@@ -263,11 +290,12 @@
               "RelativeToolTip": "DTOs\\SupplierCreateDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-07T18:03:58.294Z"
+              "WhenOpened": "2025-12-07T18:03:58.294Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 17,
               "Title": "SaleCreateDTO.cs",
               "DocumentMoniker": "C:\\Users\\caitl\\Documents\\dev\\SOA_CA2_Web_Service\\APIService\\DTOs\\SaleCreateDTO.cs",
               "RelativeDocumentMoniker": "DTOs\\SaleCreateDTO.cs",
@@ -275,11 +303,12 @@
               "RelativeToolTip": "DTOs\\SaleCreateDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-07T18:12:04.322Z"
+              "WhenOpened": "2025-12-07T18:12:04.322Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 18,
               "Title": "SaleUpdateDTO.cs",
               "DocumentMoniker": "C:\\Users\\caitl\\Documents\\dev\\SOA_CA2_Web_Service\\APIService\\DTOs\\SaleUpdateDTO.cs",
               "RelativeDocumentMoniker": "DTOs\\SaleUpdateDTO.cs",
@@ -287,7 +316,42 @@
               "RelativeToolTip": "DTOs\\SaleUpdateDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-07T18:03:53.997Z"
+              "WhenOpened": "2025-12-07T18:03:53.997Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "FloatingWindowState": {
+        "Id": "a7cb36b3-c933-4dbe-b0e3-14a5fbc5dc40",
+        "Display": 1,
+        "X": 73,
+        "Y": 52,
+        "Width": 1067,
+        "Height": 625,
+        "WindowState": 0
+      },
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "IDrinksService.cs",
+              "DocumentMoniker": "C:\\Users\\caitl\\Documents\\dev\\SOA_CA2_Web_Service\\APIService\\Interfaces\\IDrinksService.cs",
+              "RelativeDocumentMoniker": "Interfaces\\IDrinksService.cs",
+              "ToolTip": "C:\\Users\\caitl\\Documents\\dev\\SOA_CA2_Web_Service\\APIService\\Interfaces\\IDrinksService.cs",
+              "RelativeToolTip": "Interfaces\\IDrinksService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-12T20:34:59.915Z",
+              "EditorCaption": ""
             }
           ]
         }
