@@ -144,7 +144,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "APIService.Models.DrinksSales",
+        "Type": "APIService.DTOs.SaleDTO",
         "MediaTypes": [
           "text/plain",
           "application/json",

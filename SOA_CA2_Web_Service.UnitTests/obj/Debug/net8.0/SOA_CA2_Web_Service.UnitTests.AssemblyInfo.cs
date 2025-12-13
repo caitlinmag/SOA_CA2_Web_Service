@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SOA_CA2_Web_Service.UnitTests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+883d5101b6d51239fd9cfa6cb41862c105af000a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a63b9f8238787729ebe39cacbe13cc1252dc99c3")]
 [assembly: System.Reflection.AssemblyProductAttribute("SOA_CA2_Web_Service.UnitTests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SOA_CA2_Web_Service.UnitTests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

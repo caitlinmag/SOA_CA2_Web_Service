@@ -75,7 +75,7 @@ namespace APIService.Controllers
         // POST: api/DrinkItems
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
-        public async Task<ActionResult<DrinksSales>> PostSaleItem([FromBody]SaleCreateDTO saleDto)
+        public async Task<ActionResult<SaleDTO>> PostSaleItem([FromBody]SaleCreateDTO saleDto)
         {
             var newSale = new DrinksSales
             {
