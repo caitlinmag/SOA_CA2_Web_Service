@@ -105,7 +105,7 @@
               "RelativeDocumentMoniker": "..\\SOA_CA2_Web_Service.UnitTests\\SupplierTests.cs",
               "ToolTip": "C:\\Users\\caitl\\Documents\\dev\\SOA_CA2_Web_Service\\SOA_CA2_Web_Service.UnitTests\\SupplierTests.cs",
               "RelativeToolTip": "..\\SOA_CA2_Web_Service.UnitTests\\SupplierTests.cs",
-              "ViewState": "AgIAAB8AAAAAAAAAAAAuwDQAAABeAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-13T12:55:04.089Z",
               "EditorCaption": ""
@@ -120,8 +120,7 @@
               "RelativeToolTip": "..\\SOA_CA2_Web_Service.UnitTests\\SalesTests.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAIBpwBwAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-13T12:54:34.522Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-13T12:54:34.522Z"
             },
             {
               "$type": "Document",
@@ -133,8 +132,7 @@
               "RelativeToolTip": "Models\\DrinksSales.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-13T12:54:26.338Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-13T12:54:26.338Z"
             },
             {
               "$type": "Document",
@@ -146,8 +144,7 @@
               "RelativeToolTip": "Interfaces\\IUserService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-13T12:41:54.203Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-13T12:41:54.203Z"
             },
             {
               "$type": "Document",
@@ -159,8 +156,7 @@
               "RelativeToolTip": "Services\\UserService.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAAAAAB0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-13T12:41:48.546Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-13T12:41:48.546Z"
             },
             {
               "$type": "Document",
@@ -172,8 +168,7 @@
               "RelativeToolTip": "Interfaces\\ISupplierService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-13T12:36:44.365Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-13T12:36:44.365Z"
             },
             {
               "$type": "Document",
@@ -185,8 +180,7 @@
               "RelativeToolTip": "Interfaces\\IDrinksService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-13T11:41:37.087Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-13T11:41:37.087Z"
             },
             {
               "$type": "Document",
@@ -198,8 +192,7 @@
               "RelativeToolTip": "Controllers\\DrinksSalesController.cs",
               "ViewState": "AgIAAF8AAAAAAAAAAAAmwHgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-11T18:29:19.546Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-11T18:29:19.546Z"
             },
             {
               "$type": "Document",
@@ -211,8 +204,7 @@
               "RelativeToolTip": "Interfaces\\IDrinkSalesService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAuwAcAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-13T11:30:08.044Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-13T11:30:08.044Z"
             },
             {
               "$type": "Document",
@@ -224,8 +216,7 @@
               "RelativeToolTip": "DTOs\\SaleUpdateDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-07T18:03:53.997Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-07T18:03:53.997Z"
             },
             {
               "$type": "Document",
@@ -237,8 +228,7 @@
               "RelativeToolTip": "Services\\DrinksService.cs",
               "ViewState": "AgIAAAQAAAAAAAAAAAAAAAsAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-12T20:34:52.1Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-12T20:34:52.1Z"
             },
             {
               "$type": "Document",
@@ -369,7 +359,7 @@
       "VerticalTabListWidth": 256,
       "FloatingWindowState": {
         "Id": "f64bd6fa-bcc9-4d0c-bcf0-4a291b6e5130",
-        "Display": 1,
+        "Display": 0,
         "X": 530,
         "Y": 126,
         "Width": 1033,
