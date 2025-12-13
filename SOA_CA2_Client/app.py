@@ -1,4 +1,4 @@
-from flask import Flask, request, redirect, render_template
+from flask import Flask, request, redirect, render_template, jsonify
 import requests
 
 app = Flask(__name__)
@@ -27,12 +27,29 @@ def login():
             print("Invalid login details")
             return render_template("login.html")
 
-    return render_template("login.html"), response.json
+    return render_template("login.html")
 
 
 @app.route("/dashboard")
 def dashboard():
     return render_template("dashboard.html")
+
+
+# to load in api data - https://www.geeksforgeeks.org/python/how-to-get-data-from-api-in-python-flask/
+@app.route("/drinks")
+def drinks():
+    drinks_route = f"{API_Route}/DrinkItems"
+
+    try:
+        response = requests.get(drinks_route)
+        response.raise_for_status()
+        data = response.json()
+        return render_template("drinks.html", drinks_list=data)
+
+    except requests.exceptions.HTTPError as err:
+        error = {"error": f"Error occured: {err}"}
+        print("Error message:", error)
+        return render_template("drinks.html", drinks_list=[])
 
 
 if __name__ == "__main__":
