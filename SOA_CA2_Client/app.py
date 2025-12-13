@@ -1,11 +1,12 @@
-from flask import Flask, request, redirect, render_template, jsonify
+from wsgiref import headers
+from flask import Flask, request, redirect, render_template, jsonify, url_for, session
 import requests
 
 app = Flask(__name__)
 
 secret_key = "SOACA2APICLIENT"
-
 API_Route = "http://localhost:5216/api"
+app.secret_key = secret_key
 
 
 # using the tutorial: https://www.restapiexample.com/python/consuming-a-restful-api-with-python-and-flask/?utm_source=chatgpt.com
@@ -22,11 +23,22 @@ def login():
 
         # https://fastapi.tiangolo.com/tutorial/response-status-code/
         if response.status_code == 200:  # login is successful
-            return redirect("/dashboard")
+            try:
+                authorise_data = response.json()
+                jwt_token = authorise_data.get("token")
+
+                if jwt_token:  # checking if user has been given a token
+                    session["jwt_token"] = jwt_token
+                    print("Token has been found")
+                    return redirect("/dashboard")
+                else:
+                    print("Token not found")
+                    return render_template("login.html")
+            except Exception:
+                return render_template("login.html")
         else:
             print("Invalid login details")
             return render_template("login.html")
-
     return render_template("login.html")
 
 
@@ -36,9 +48,47 @@ def dashboard():
 
 
 # to load in api data - https://www.geeksforgeeks.org/python/how-to-get-data-from-api-in-python-flask/
-@app.route("/drinks")
+@app.route("/drinks", methods=["GET", "POST"])
 def drinks():
     drinks_route = f"{API_Route}/DrinkItems"
+
+    # fix for jwt token from - https://stackoverflow.com/questions/20620300/http-content-type-header-and-json
+    # headers required below
+    token = session.get("jwt_token")
+    headers = {"Content-Type": "application/json"}
+
+    if token:
+        headers["Authorization"] = f"Bearer {token}"
+    else:
+        print("not allowed")
+        pass
+
+    # create drink, similar to the login input
+    if request.method == "POST":
+        name = request.form["name"]
+        drinktype = request.form["drink_type"]
+        price = request.form["price"]
+        extras = request.form["extras"]
+        supplierid = request.form["supplier_id"]
+
+        try:
+            response = requests.post(
+                f"{API_Route}/DrinkItems",
+                json={
+                    "drinkName": name,
+                    "drinkType": drinktype,
+                    "price": price,
+                    "extras": extras,
+                    "supplierId": supplierid,
+                },
+                headers=headers,
+            )
+            response.raise_for_status()
+            return redirect(url_for("drinks"))
+        except requests.exceptions.HTTPError as err:
+            error = {"error": f"Error occured: {err}"}
+            print("Error message:", error)
+            pass
 
     try:
         response = requests.get(drinks_route)
@@ -50,6 +100,48 @@ def drinks():
         error = {"error": f"Error occured: {err}"}
         print("Error message:", error)
         return render_template("drinks.html", drinks_list=[])
+    return render_template("drinks.html")
+
+
+@app.route("/update_drink", methods=["POST"])
+def update_drink():
+    drinks_route = f"{API_Route}/DrinkItems"
+
+    token = session.get("jwt_token")
+    headers = {"Content-Type": "application/json"}
+
+    if token:
+        headers["Authorization"] = f"Bearer {token}"
+    else:
+        print("not allowed")
+        pass
+
+    # create drink, similar to the login input
+    if request.method == "POST":
+        id = request.form["drink_id"]
+        name = request.form["name"]
+        drinktype = request.form["drink_type"]
+        price = request.form["price"]
+        extras = request.form["extras"]
+        supplierid = request.form["supplier_id"]
+
+        # if id:
+
+        #             "drinkItemId": id,
+        #             "drinkName": name,
+        #             "drinkType": drinktype,
+        #             "price": price,
+        #             "extras": extras,
+        #             "supplierId": supplierid,
+
+        #         headers=headers,
+
+        #     response.raise_for_status()
+        #     return redirect(url_for("drinks"))
+        # except requests.exceptions.HTTPError as err:
+        #     error = {"error": f"Error occured: {err}"}
+        #     print("Error message:", error)
+        #     pass
 
 
 @app.route("/sales")
