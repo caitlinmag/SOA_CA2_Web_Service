@@ -3,9 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <title>Suppliers</title>
 </head>
 <body>
-    
+     <h1 class="text-center mb-3">Supplier Information</h1>
+    {%  if error %}
+        <p class="error">{{ error }}</p>
+    {% endif %}
+
+    {%  if suppliers_list %}
+        <table class="table table-hover">
+            <caption>List of all Suppliers</caption>
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">Supplier ID</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Location</th>
+                    <th scope="col">Stock Level</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for supplier in suppliers_list %}
+                <tr>
+                    <th>{{ supplier.supplierId }}</th>
+                    <th>{{ supplier.supplierName }}</th>
+                    <th>{{ supplier.location }}</th>
+                    <th>{{ supplier.stockLevel }}</th>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+    <p>No suppliers have been found in the database.</p>
+    {%  endif %}
+
+    <a href="/dashboard">Back to Dashboard</a>
 </body>
 </html>
