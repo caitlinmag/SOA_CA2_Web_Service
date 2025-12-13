@@ -29,3 +29,8 @@ Unit Tests
 
 Postman 
 - Tested each of the CRUD API endpoints for drinks, sales, suppliers and user data. 
+
+EXTRA - MOBILE CLIENT
+- Created a small python flask app to display information from the API.
+I used this website for taking in the data from API for python:
+- https://www.geeksforgeeks.org/python/how-to-get-data-from-api-in-python-flask/
