@@ -43,6 +43,98 @@
     <p>No drinks have been found in the database.</p>
     {%  endif %}
 
+    <div class="container my-5">
+        <div class="row justify-content-center">
+
+            <div class="col-md-4 mb-4">
+                <div class="card shadow-sm">
+                            <div class="card-header">
+                        <h1 class="text-center mb-3">Add a new Drink</h1>
+    </div>
+                                <div class="card-body">
+    <form method="POST" action="{{ url_for('drinks') }}">
+        <div class="mb-3">
+        <label>Name:</label>
+        <input type="text" name="name" placeholder="Enter Drink Name" required/>
+        </div>
+        <div class="mb-3">
+        <label>Type:</label>
+        <input type="text" name="drink_type" placeholder="Enter Drink Type" required/>
+        </div>
+        <div class="mb-3">
+        <label>Price (Format 4.50):</label>
+        <input type="text" name="price" placeholder="Enter Price" required/>
+        </div>
+        <div class="mb-3">
+        <label>Extras:</label>
+        <input type="text" name="extras" placeholder="Enter Extras" required/>
+        </div>
+        <div class="mb-3">
+        <label>Supplier ID:</label>
+        <input type="text" name="supplier_id" placeholder="Enter Supplier ID" required/>
+        </div>
+        <button type="submit" class="btn btn-primary w-100">Create</button>
+    </form>
+    </div>
+    </div>
+    </div>
+
+    <div class="col-md-4 mb-4">
+                        <div class="card shadow-sm">
+                            <div class="card-header">
+    <h1 class="text-center mb-3">Update a Drink</h1>
+    </div>
+                                <div class="card-body">
+    <form method="POST" action="{{ url_for('drinks') }}">
+         <div class="mb-3">
+        <label>ID:</label>
+        <input type="text" name="drink_id" placeholder="Enter Drink ID" required/>
+        </div>
+           <div class="mb-3">
+        <label>Name:</label>
+        <input type="text" name="name" placeholder="Enter Drink Name" required/>
+        </div>
+        <div class="mb-3">
+        <label>Type:</label>
+        <input type="text" name="drink_type" placeholder="Enter Drink Type" required/>
+        </div>
+        <div class="mb-3">
+        <label>Price (Format 4.50):</label>
+        <input type="text" name="price" placeholder="Enter Price" required/>
+        </div>
+        <div class="mb-3">
+        <label>Extras:</label>
+        <input type="text" name="extras" placeholder="Enter Extras" required/>
+        </div>
+        <div class="mb-3">
+        <label>Supplier ID:</label>
+        <input type="text" name="supplier_id" placeholder="Enter Supplier ID" required/>
+        </div>
+        <button type="submit" class="btn btn-primary w-100">Update</button>
+    </form>
+    </div>
+    </div>
+    </div>
+
+<div class="col-md-4 mb-4">
+                    <div class="card shadow-sm">
+                            <div class="card-header">
+    <h1 class="text-center mb-3">Delete a Drink</h1>
+    </div>
+                                <div class="card-body">
+    <form method="POST" action="{{ url_for('drinks') }}">
+        <div class="mb-3">
+        <label>Drink ID:</label>
+        <input type="text" name="drink_id" placeholder="Enter Drink ID" required/>
+        </div>
+        <button type="submit" class="btn btn-primary w-100">Delete</button>
+    </form>
+    </div>
+</div>
+</div>
+</div>
+</div>
     <a href="/dashboard">Back to Dashboard</a>
+</div>
 </body>
 </html>
