@@ -52,5 +52,37 @@ def drinks():
         return render_template("drinks.html", drinks_list=[])
 
 
+@app.route("/sales")
+def sales():
+    sales_route = f"{API_Route}/DrinkSales"
+
+    try:
+        response = requests.get(sales_route)
+        response.raise_for_status()
+        data = response.json()
+        return render_template("sales.html", sales_list=data)
+
+    except requests.exceptions.HTTPError as err:
+        error = {"error": f"Error occured: {err}"}
+        print("Error message:", error)
+        return render_template("sales.html", sales_list=[])
+
+
+@app.route("/suppliers")
+def suppliers():
+    suppliers_route = f"{API_Route}/Suppliers"
+
+    try:
+        response = requests.get(suppliers_route)
+        response.raise_for_status()
+        data = response.json()
+        return render_template("suppliers.html", suppliers_list=data)
+
+    except requests.exceptions.HTTPError as err:
+        error = {"error": f"Error occured: {err}"}
+        print("Error message:", error)
+        return render_template("suppliers.html", suppliers_list=[])
+
+
 if __name__ == "__main__":
     app.run(debug=True)
