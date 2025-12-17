@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Users</title>
+</head>
+<body>
+     <h1 class="text-center mb-3">Users Information</h1>
+    {%  if error %}
+        <p class="error">{{ error }}</p>
+    {% endif %}
+
+    {%  if users_list %}
+    <div class="table-responsive">
+        <table class="table table-sm table-hover table-striped align-middle w-auto mx-auto border rounded">
+            <caption>List of all Users</caption>
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">ID</th>
+                    <td scope="col">User Name</td>
+                    <td scope="col">Password</td>
+                </tr>
+            </thead>
+            <tbody>
+                {% for user in users_list %}
+                <tr>
+                    <th>{{ user.id }}</th>
+                    <td>{{ user.userName }}</td>
+                    <td>{{ user.password }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        </div>
+    {% else %}
+    <p>No users have been found in the database.</p>
+    {%  endif %}
+
+    <hr class="my-5">
+    <h1 class="text-center mb-3">Manage Users</h1>
+    <div class="container my-5">
+        <div class="">
+
+            <div class="mb-4">
+                <div class="card shadow-sm w-50 mx-auto">
+                            <div class="card-header">
+                        <h2 class="text-center mb-3">Add a new User</h2>
+    </div>
+                                <div class="card-body text-center">
+    <form method="POST" action="{{ url_for('add_user') }}">
+        <div class="mb-3">
+        <label class="form-label">User ID</label>
+        <input type="text" class="form-control" name="id" placeholder="Enter User ID" required/>
+        </div>
+        <div class="mb-3">
+        <label class="form-label">Username</label>
+        <input type="text" class="form-control" name="username" placeholder="Enter Username" required/>
+        </div>
+        <div class="mb-3">
+        <label class="form-label">Password</label><br>
+        <input type="text" class="form-control" name="password" placeholder="Enter Password" required/>
+        </div>
+        <button type="submit" class="btn btn-primary">Create</button>
+    </form>
+    </div>
+    </div>
+        <a href="/dashboard" class="mr-3 btn-info btn-lg px-4 text-white shadow-sm">Dashboard</a>
+    </div>
+</body>
+</html>

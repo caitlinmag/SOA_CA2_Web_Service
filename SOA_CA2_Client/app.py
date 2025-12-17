@@ -390,5 +390,56 @@ def delete_supplier():
     return redirect(url_for("suppliers"))
 
 
+# USERS FUNCTIONALITY
+@app.route("/users")
+def users():
+    users_route = f"{API_Route}/User"
+
+    try:
+        response = requests.get(users_route)
+        response.raise_for_status()
+        data = response.json()
+        return render_template("users.html", users_list=data)
+
+    except requests.exceptions.HTTPError as err:
+        error = {"error": f"Error occured: {err}"}
+        print("Error message:", error)
+        return render_template("users.html", users_list=[])
+
+
+@app.route("/add_user", methods=["POST"])
+def add_user():
+    token = session.get("jwt_token")
+    headers = {"Content-Type": "application/json"}
+
+    if token:
+        headers["Authorization"] = f"Bearer {token}"
+    else:
+        print("not allowed")
+        pass
+
+    if request.method == "POST":
+        id = request.form["id"]
+        username = request.form["username"]
+        password = request.form["password"]
+
+        try:
+            response = requests.post(
+                f"{API_Route}/User",
+                json={
+                    "id": id,
+                    "userName": username,
+                    "password": password,
+                },
+                headers=headers,
+            )
+            response.raise_for_status()
+        except requests.exceptions.HTTPError as err:
+            error = {"error": f"Error occured: {err}"}
+            print("Error message:", error)
+            pass
+        return redirect(url_for("users"))
+
+
 if __name__ == "__main__":
     app.run(debug=True)
