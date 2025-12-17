@@ -47,6 +47,7 @@ def dashboard():
     return render_template("dashboard.html")
 
 
+# DRINKS FUNCTIONALITY
 # to load in api data - https://www.geeksforgeeks.org/python/how-to-get-data-from-api-in-python-flask/
 @app.route("/drinks", methods=["GET", "POST"])
 def drinks():
@@ -168,6 +169,7 @@ def delete_drink():
     return redirect(url_for("drinks"))
 
 
+# SALES FUNCTIONALITY
 @app.route("/sales")
 def sales():
     sales_route = f"{API_Route}/DrinkSales"
@@ -184,6 +186,99 @@ def sales():
         return render_template("sales.html", sales_list=[])
 
 
+@app.route("/add_sale", methods=["POST"])
+def add_sale():
+    token = session.get("jwt_token")
+    headers = {"Content-Type": "application/json"}
+
+    if token:
+        headers["Authorization"] = f"Bearer {token}"
+    else:
+        print("not allowed")
+        pass
+
+    if request.method == "POST":
+        drink_id = request.form["drink_id"]
+        quantity = request.form["quantity"]
+
+        try:
+            response = requests.post(
+                f"{API_Route}/DrinkSales",
+                json={
+                    "drinkItemId": drink_id,
+                    "quantity": quantity,
+                },
+                headers=headers,
+            )
+            response.raise_for_status()
+        except requests.exceptions.HTTPError as err:
+            error = {"error": f"Error occured: {err}"}
+            print("Error message:", error)
+            pass
+        return redirect(url_for("sales"))
+
+
+@app.route("/update_sale", methods=["POST"])
+def update_sale():
+    token = session.get("jwt_token")
+    headers = {"Content-Type": "application/json"}
+
+    if token:
+        headers["Authorization"] = f"Bearer {token}"
+    else:
+        print("not allowed")
+        pass
+
+    id = request.form["sale_id"]
+
+    try:
+        response = requests.put(
+            f"{API_Route}/DrinkSales/{id}",
+            json={
+                "drinkItemId": request.form["drink_id"],
+                "quantity": request.form["quantity"],
+            },
+            headers=headers,
+        )
+
+    except requests.exceptions.HTTPError as err:
+        error = {"error": f"Error occured: {err}"}
+        print("Error message:", error)
+        pass
+
+    print("error:", response.text)
+    return redirect(url_for("sales"))
+
+
+@app.route("/delete_sale", methods=["POST"])
+def delete_sale():
+    token = session.get("jwt_token")
+    headers = {"Content-Type": "application/json"}
+
+    if token:
+        headers["Authorization"] = f"Bearer {token}"
+    else:
+        print("not allowed")
+        pass
+
+    id = request.form["sale_id"]
+
+    try:
+        response = requests.delete(
+            f"{API_Route}/DrinkSales/{id}",
+            headers=headers,
+        )
+
+    except requests.exceptions.HTTPError as err:
+        error = {"error": f"Error occured: {err}"}
+        print("Error message:", error)
+        pass
+
+    print("error:", response.text)
+    return redirect(url_for("sales"))
+
+
+# SUPPLIERS FUNCTIONALITY
 @app.route("/suppliers")
 def suppliers():
     suppliers_route = f"{API_Route}/Suppliers"
@@ -198,6 +293,101 @@ def suppliers():
         error = {"error": f"Error occured: {err}"}
         print("Error message:", error)
         return render_template("suppliers.html", suppliers_list=[])
+
+
+@app.route("/add_supplier", methods=["POST"])
+def add_supplier():
+    token = session.get("jwt_token")
+    headers = {"Content-Type": "application/json"}
+
+    if token:
+        headers["Authorization"] = f"Bearer {token}"
+    else:
+        print("not allowed")
+        pass
+
+    if request.method == "POST":
+        supplier_name = request.form["name"]
+        location = request.form["location"]
+        stock_level = request.form["stock"]
+
+        try:
+            response = requests.post(
+                f"{API_Route}/Suppliers",
+                json={
+                    "supplierName": supplier_name,
+                    "location": location,
+                    "stockLevel": stock_level,
+                },
+                headers=headers,
+            )
+            response.raise_for_status()
+        except requests.exceptions.HTTPError as err:
+            error = {"error": f"Error occured: {err}"}
+            print("Error message:", error)
+            pass
+        return redirect(url_for("suppliers"))
+
+
+@app.route("/update_supplier", methods=["POST"])
+def update_supplier():
+    token = session.get("jwt_token")
+    headers = {"Content-Type": "application/json"}
+
+    if token:
+        headers["Authorization"] = f"Bearer {token}"
+    else:
+        print("not allowed")
+        pass
+
+    id = request.form["id"]
+
+    try:
+        response = requests.put(
+            f"{API_Route}/Suppliers/{id}",
+            json={
+                "supplierName": request.form["name"],
+                "location": request.form["location"],
+                "stockLevel": request.form["stock"],
+            },
+            headers=headers,
+        )
+
+    except requests.exceptions.HTTPError as err:
+        error = {"error": f"Error occured: {err}"}
+        print("Error message:", error)
+        pass
+
+    print("error:", response.text)
+    return redirect(url_for("suppliers"))
+
+
+@app.route("/delete_supplier", methods=["POST"])
+def delete_supplier():
+    token = session.get("jwt_token")
+    headers = {"Content-Type": "application/json"}
+
+    if token:
+        headers["Authorization"] = f"Bearer {token}"
+    else:
+        print("not allowed")
+        pass
+
+    id = request.form["supplier_id"]
+
+    try:
+        response = requests.delete(
+            f"{API_Route}/Suppliers/{id}",
+            headers=headers,
+        )
+
+    except requests.exceptions.HTTPError as err:
+        error = {"error": f"Error occured: {err}"}
+        print("Error message:", error)
+        pass
+
+    print("error:", response.text)
+    return redirect(url_for("suppliers"))
 
 
 if __name__ == "__main__":

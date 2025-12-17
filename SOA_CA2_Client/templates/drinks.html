@@ -8,13 +8,14 @@
     <title>Drinks</title>
 </head>
 <body>
-    <h1 class="text-center mb-3">Drinks Menu</h1>
+    <h1 class="text-center mb-3">Drinks Information</h1>
     {%  if error %}
         <p class="error">{{ error }}</p>
     {% endif %}
 
     {%  if drinks_list %}
-        <table class="table table-hover">
+    <div class="table-responsive">
+        <table class="table table-sm table-hover table-striped align-middle w-auto mx-auto border rounded">
             <caption>List of all Drinks</caption>
             <thead class="thead-dark">
                 <tr>
@@ -30,21 +31,24 @@
                 {% for drink in drinks_list %}
                 <tr>
                     <th>{{ drink.drinkItemId }}</th>
-                    <th>{{ drink.drinkName }}</th>
-                    <th>{{ drink.drinkType }}</th>
-                    <th>{{ drink.price }}</th>
-                    <th>{{ drink.extras }}</th>
-                    <th>{{ drink.supplierId }}</th>
+                    <td>{{ drink.drinkName }}</td>
+                    <td>{{ drink.drinkType }}</td>
+                    <td>{{ drink.price }}</td>
+                    <td>{{ drink.extras }}</td>
+                    <td>{{ drink.supplierId }}</td>
                 </tr>
                 {% endfor %}
             </tbody>
         </table>
+        </div>
     {% else %}
     <p>No drinks have been found in the database.</p>
     {%  endif %}
-
+    
+    <hr class="my-5">
+    <h1 class="text-center mb-3">Manage Drinks</h1>
     <div class="container my-5">
-        <div class="row justify-content-center">
+        <div class="row g-4">
 
             <div class="col-md-4 mb-4">
                 <div class="card shadow-sm">
@@ -54,24 +58,24 @@
                                 <div class="card-body text-center">
     <form method="POST" action="{{ url_for('add_drink') }}">
         <div class="mb-3">
-        <label>Drink Name</label><br>
-        <input type="text" name="name" placeholder="Enter Drink Name" required/>
+        <label class="form-label">Drink Name</label>
+        <input type="text" class="form-control" name="name" placeholder="Enter Drink Name" required/>
         </div>
         <div class="mb-3">
-        <label>Type</label><br>
-        <input type="text" name="drink_type" placeholder="Enter Drink Type" required/>
+        <label class="form-label">Type</label>
+        <input type="text" class="form-control" name="drink_type" placeholder="Enter Drink Type" required/>
         </div>
         <div class="mb-3">
-        <label>Price (Format 4.50)</label><br>
-        <input type="text" name="price" placeholder="Enter Price" required/>
+        <label class="form-label">Price (Format 4.50)</label><br>
+        <input type="text" class="form-control" name="price" placeholder="Enter Price" required/>
         </div>
         <div class="mb-3">
-        <label>Extras</label><br>
-        <input type="text" name="extras" placeholder="Enter Extras" required/>
+        <label class="form-label">Extras</label><br>
+        <input type="text" class="form-control" name="extras" placeholder="Enter Extras" required/>
         </div>
         <div class="mb-3">
-        <label>Supplier ID</label><br>
-        <input type="text" name="supplier_id" placeholder="Enter Supplier ID" required/>
+        <label class="form-label">Supplier ID</label><br>
+        <input type="text" class="form-control" name="supplier_id" placeholder="Enter Supplier ID" required/>
         </div>
         <button type="submit" class="btn btn-primary">Create</button>
     </form>
@@ -88,27 +92,27 @@
     <form method="POST" action="{{ url_for('update_drink') }}">
          <div class="mb-3">
         <label>Drink ID</label><br>
-        <input type="text" name="drink_id" placeholder="Enter Drink ID" required/>
+        <input type="text" class="form-control" name="drink_id" placeholder="Enter Drink ID" required/>
         </div>
+        <label>Drink Name</label>
            <div class="mb-3">
-        <label>Drink Name</label><br>
-        <input type="text" name="name" placeholder="Enter Drink Name" required/>
+          <input type="text" class="form-control" name="name" placeholder="Enter Drink Name" required/>
         </div>
         <div class="mb-3">
-        <label>Type</label><br>
-        <input type="text" name="drink_type" placeholder="Enter Drink Type" required/>
+        <label class="form-label">Type</label>
+        <input type="text" class="form-control" name="drink_type" placeholder="Enter Drink Type" required/>
         </div>
         <div class="mb-3">
-        <label>Price (Format 4.50)</label><br>
-        <input type="text" name="price" placeholder="Enter Price" required/>
+        <label class="form-label">Price (Format 4.50)</label><br>
+        <input type="text" class="form-control" name="price" placeholder="Enter Price" required/>
         </div>
         <div class="mb-3">
-        <label>Extras</label><br>
-        <input type="text" name="extras" placeholder="Enter Extras" required/>
+        <label class="form-label">Extras</label><br>
+        <input type="text" class="form-control" name="extras" placeholder="Enter Extras" required/>
         </div>
         <div class="mb-3">
-        <label>Supplier ID</label><br>
-        <input type="text" name="supplier_id" placeholder="Enter Supplier ID" required/>
+        <label class="form-label">Supplier ID</label><br>
+        <input type="text" class="form-control" name="supplier_id" placeholder="Enter Supplier ID" required/>
         </div>
         <button type="submit" class="btn btn-primary">Update</button>
     </form>
@@ -126,9 +130,9 @@
         <div class="mb-3 text-center">
         <label>Drink ID</label>
         <br>
-        <input type="text" name="drink_id" placeholder="Enter Drink ID" required/>
+        <input type="text" class="form-control" name="drink_id" placeholder="Enter Drink ID" required/>
         </div>
-                        <button type="submit" class="btn btn-primary">Delete</button>
+                        <button type="submit" class="btn btn-danger">Delete</button>
     </form>
     </div>
 </div>
