@@ -14,8 +14,9 @@
     {% endif %}
 
     {%  if suppliers_list %}
-        <table class="table table-hover">
-            <caption>List of all Suppliers</caption>
+    <div class="table-responsive">
+        <table class="table table-sm table-hover table-striped align-middle w-auto mx-auto border rounded">
+                        <caption>List of all Suppliers</caption>
             <thead class="thead-dark">
                 <tr>
                     <th scope="col">Supplier ID</th>
@@ -28,17 +29,97 @@
                 {% for supplier in suppliers_list %}
                 <tr>
                     <th>{{ supplier.supplierId }}</th>
-                    <th>{{ supplier.supplierName }}</th>
-                    <th>{{ supplier.location }}</th>
-                    <th>{{ supplier.stockLevel }}</th>
+                    <td>{{ supplier.supplierName }}</td>
+                    <td>{{ supplier.location }}</td>
+                    <td>{{ supplier.stockLevel }}</td>
                 </tr>
                 {% endfor %}
             </tbody>
         </table>
+        </div>
     {% else %}
     <p>No suppliers have been found in the database.</p>
     {%  endif %}
 
+    <hr class="my-5">
+    <h1 class="text-center mb-3">Manage Suppliers</h1>
+    <div class="container my-5">
+        <div class="row g-4">
+
+            <div class="col-md-4 mb-4">
+                <div class="card shadow-sm">
+                            <div class="card-header">
+                        <h2 class="text-center mb-3">Add a new Supplier</h2>
+    </div>
+                                <div class="card-body text-center">
+    <form method="POST" action="{{ url_for('add_supplier') }}">
+        <div class="mb-3">
+        <label class="form-label">Supplier Name</label>
+        <input type="text" class="form-control" name="name" placeholder="Enter Name" required/>
+        </div>
+        <div class="mb-3">
+        <label class="form-label">Location</label>
+        <input type="text" class="form-control" name="location" placeholder="Enter Location" required/>
+        </div>
+        <div class="mb-3">
+        <label class="form-label">Stock Level</label><br>
+        <input type="text" class="form-control" name="stock" placeholder="Enter Stock" required/>
+        </div>
+        <button type="submit" class="btn btn-primary">Create</button>
+    </form>
+    </div>
+    </div>
+    </div>
+
+    <div class="col-md-4 mb-4">
+                        <div class="card shadow-sm">
+                            <div class="card-header">
+    <h2 class="text-center mb-3">Update a Supplier</h1>
+    </div>
+                                <div class="card-body text-center">
+    <form method="POST" action="{{ url_for('update_supplier') }}">
+         <div class="mb-3">
+        <label class="form-label">Supplier ID</label>
+        <input type="text" class="form-control" name="id" placeholder="Enter ID" required/>
+        </div>
+         <div class="mb-3">
+        <label class="form-label">Supplier Name</label>
+        <input type="text" class="form-control" name="name" placeholder="Enter Name" required/>
+        </div>
+        <div class="mb-3">
+        <label class="form-label">Location</label>
+        <input type="text" class="form-control" name="location" placeholder="Enter Location" required/>
+        </div>
+        <div class="mb-3">
+        <label class="form-label">Stock Level</label><br>
+        <input type="text" class="form-control" name="stock" placeholder="Enter Stock" required/>
+        </div>
+        <button type="submit" class="btn btn-primary">Update</button>
+    </form>
+    </div>
+    </div>
+    </div>
+
+<div class="col-md-4 mb-4">
+                    <div class="card shadow-sm">
+                            <div class="card-header">
+    <h2 class="text-center mb-3">Delete a Supplier</h1>
+    </div>
+                                <div class="card-body text-center">
+    <form method="POST" action="{{ url_for('delete_supplier') }}">
+        <div class="mb-3 text-center">
+        <label>Supplier ID</label>
+        <br>
+        <input type="text" class="form-control" name="supplier_id" placeholder="Enter Supplier ID" required/>
+        </div>
+                        <button type="submit" class="btn btn-danger">Delete</button>
+    </form>
+    </div>
+</div>
+</div>
+</div>
+</div>
     <a href="/dashboard">Back to Dashboard</a>
+</div>
 </body>
 </html>
