@@ -49,31 +49,31 @@
             <div class="col-md-4 mb-4">
                 <div class="card shadow-sm">
                             <div class="card-header">
-                        <h1 class="text-center mb-3">Add a new Drink</h1>
+                        <h2 class="text-center mb-3">Add a new Drink</h2>
     </div>
-                                <div class="card-body">
-    <form method="POST" action="{{ url_for('drinks') }}">
+                                <div class="card-body text-center">
+    <form method="POST" action="{{ url_for('add_drink') }}">
         <div class="mb-3">
-        <label>Name:</label>
+        <label>Drink Name</label><br>
         <input type="text" name="name" placeholder="Enter Drink Name" required/>
         </div>
         <div class="mb-3">
-        <label>Type:</label>
+        <label>Type</label><br>
         <input type="text" name="drink_type" placeholder="Enter Drink Type" required/>
         </div>
         <div class="mb-3">
-        <label>Price (Format 4.50):</label>
+        <label>Price (Format 4.50)</label><br>
         <input type="text" name="price" placeholder="Enter Price" required/>
         </div>
         <div class="mb-3">
-        <label>Extras:</label>
+        <label>Extras</label><br>
         <input type="text" name="extras" placeholder="Enter Extras" required/>
         </div>
         <div class="mb-3">
-        <label>Supplier ID:</label>
+        <label>Supplier ID</label><br>
         <input type="text" name="supplier_id" placeholder="Enter Supplier ID" required/>
         </div>
-        <button type="submit" class="btn btn-primary w-100">Create</button>
+        <button type="submit" class="btn btn-primary">Create</button>
     </form>
     </div>
     </div>
@@ -82,35 +82,35 @@
     <div class="col-md-4 mb-4">
                         <div class="card shadow-sm">
                             <div class="card-header">
-    <h1 class="text-center mb-3">Update a Drink</h1>
+    <h2 class="text-center mb-3">Update a Drink</h1>
     </div>
-                                <div class="card-body">
-    <form method="POST" action="{{ url_for('drinks') }}">
+                                <div class="card-body text-center">
+    <form method="POST" action="{{ url_for('update_drink') }}">
          <div class="mb-3">
-        <label>ID:</label>
+        <label>Drink ID</label><br>
         <input type="text" name="drink_id" placeholder="Enter Drink ID" required/>
         </div>
            <div class="mb-3">
-        <label>Name:</label>
+        <label>Drink Name</label><br>
         <input type="text" name="name" placeholder="Enter Drink Name" required/>
         </div>
         <div class="mb-3">
-        <label>Type:</label>
+        <label>Type</label><br>
         <input type="text" name="drink_type" placeholder="Enter Drink Type" required/>
         </div>
         <div class="mb-3">
-        <label>Price (Format 4.50):</label>
+        <label>Price (Format 4.50)</label><br>
         <input type="text" name="price" placeholder="Enter Price" required/>
         </div>
         <div class="mb-3">
-        <label>Extras:</label>
+        <label>Extras</label><br>
         <input type="text" name="extras" placeholder="Enter Extras" required/>
         </div>
         <div class="mb-3">
-        <label>Supplier ID:</label>
+        <label>Supplier ID</label><br>
         <input type="text" name="supplier_id" placeholder="Enter Supplier ID" required/>
         </div>
-        <button type="submit" class="btn btn-primary w-100">Update</button>
+        <button type="submit" class="btn btn-primary">Update</button>
     </form>
     </div>
     </div>
@@ -119,15 +119,16 @@
 <div class="col-md-4 mb-4">
                     <div class="card shadow-sm">
                             <div class="card-header">
-    <h1 class="text-center mb-3">Delete a Drink</h1>
+    <h2 class="text-center mb-3">Delete a Drink</h1>
     </div>
-                                <div class="card-body">
-    <form method="POST" action="{{ url_for('drinks') }}">
-        <div class="mb-3">
-        <label>Drink ID:</label>
+                                <div class="card-body text-center">
+    <form method="POST" action="{{ url_for('delete_drink') }}">
+        <div class="mb-3 text-center">
+        <label>Drink ID</label>
+        <br>
         <input type="text" name="drink_id" placeholder="Enter Drink ID" required/>
         </div>
-        <button type="submit" class="btn btn-primary w-100">Delete</button>
+                        <button type="submit" class="btn btn-primary">Delete</button>
     </form>
     </div>
 </div>

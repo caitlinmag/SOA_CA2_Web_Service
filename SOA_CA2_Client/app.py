@@ -52,6 +52,20 @@ def dashboard():
 def drinks():
     drinks_route = f"{API_Route}/DrinkItems"
 
+    try:
+        response = requests.get(drinks_route)
+        response.raise_for_status()
+        data = response.json()
+        return render_template("drinks.html", drinks_list=data)
+
+    except requests.exceptions.HTTPError as err:
+        error = {"error": f"Error occured: {err}"}
+        print("Error message:", error)
+        return render_template("drinks.html", drinks_list=[])
+
+
+@app.route("/add_drink", methods=["POST"])
+def add_drink():
     # fix for jwt token from - https://stackoverflow.com/questions/20620300/http-content-type-header-and-json
     # headers required below
     token = session.get("jwt_token")
@@ -84,29 +98,15 @@ def drinks():
                 headers=headers,
             )
             response.raise_for_status()
-            return redirect(url_for("drinks"))
         except requests.exceptions.HTTPError as err:
             error = {"error": f"Error occured: {err}"}
             print("Error message:", error)
             pass
-
-    try:
-        response = requests.get(drinks_route)
-        response.raise_for_status()
-        data = response.json()
-        return render_template("drinks.html", drinks_list=data)
-
-    except requests.exceptions.HTTPError as err:
-        error = {"error": f"Error occured: {err}"}
-        print("Error message:", error)
-        return render_template("drinks.html", drinks_list=[])
-    return render_template("drinks.html")
+        return redirect(url_for("drinks"))
 
 
 @app.route("/update_drink", methods=["POST"])
 def update_drink():
-    drinks_route = f"{API_Route}/DrinkItems"
-
     token = session.get("jwt_token")
     headers = {"Content-Type": "application/json"}
 
@@ -116,32 +116,56 @@ def update_drink():
         print("not allowed")
         pass
 
-    # create drink, similar to the login input
-    if request.method == "POST":
-        id = request.form["drink_id"]
-        name = request.form["name"]
-        drinktype = request.form["drink_type"]
-        price = request.form["price"]
-        extras = request.form["extras"]
-        supplierid = request.form["supplier_id"]
+    id = request.form["drink_id"]
 
-        # if id:
+    try:
+        response = requests.put(
+            f"{API_Route}/DrinkItems/{id}",
+            json={
+                "drinkName": request.form["name"],
+                "drinkType": request.form["drink_type"],
+                "price": request.form["price"],
+                "extras": request.form["extras"],
+                "supplierId": request.form["supplier_id"],
+            },
+            headers=headers,
+        )
 
-        #             "drinkItemId": id,
-        #             "drinkName": name,
-        #             "drinkType": drinktype,
-        #             "price": price,
-        #             "extras": extras,
-        #             "supplierId": supplierid,
+    except requests.exceptions.HTTPError as err:
+        error = {"error": f"Error occured: {err}"}
+        print("Error message:", error)
+        pass
 
-        #         headers=headers,
+    print("error:", response.text)
+    return redirect(url_for("drinks"))
 
-        #     response.raise_for_status()
-        #     return redirect(url_for("drinks"))
-        # except requests.exceptions.HTTPError as err:
-        #     error = {"error": f"Error occured: {err}"}
-        #     print("Error message:", error)
-        #     pass
+
+@app.route("/delete_drink", methods=["POST"])
+def delete_drink():
+    token = session.get("jwt_token")
+    headers = {"Content-Type": "application/json"}
+
+    if token:
+        headers["Authorization"] = f"Bearer {token}"
+    else:
+        print("not allowed")
+        pass
+
+    id = request.form["drink_id"]
+
+    try:
+        response = requests.delete(
+            f"{API_Route}/DrinkItems/{id}",
+            headers=headers,
+        )
+
+    except requests.exceptions.HTTPError as err:
+        error = {"error": f"Error occured: {err}"}
+        print("Error message:", error)
+        pass
+
+    print("error:", response.text)
+    return redirect(url_for("drinks"))
 
 
 @app.route("/sales")
