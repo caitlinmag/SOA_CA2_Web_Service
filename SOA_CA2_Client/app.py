@@ -5,7 +5,10 @@ import requests
 app = Flask(__name__)
 
 secret_key = "SOACA2APICLIENT"
-API_Route = "http://localhost:5216/api"
+API_Route = (
+    "https://soaapiservice-h4h9a3fefqhyc0ds.francecentral-01.azurewebsites.net/api"
+)
+# API_Route = "http://localhost:5216/api"
 app.secret_key = secret_key
 
 
