@@ -28,7 +28,15 @@ Unit Tests
 - Testing CRUD functionality for drinks, sales, suppliers and user data.
 
 Postman 
-- Tested each of the CRUD API endpoints for drinks, sales, suppliers and user data. 
+- Tested each of the CRUD API endpoints for drinks, sales, suppliers and user data.
+- Tested the deployed API 
+
+DEPLOYMENT
+I used Azure to deploy my API, by following this tutorial:
+https://learn.microsoft.com/en-us/aspnet/core/host-and-deploy/azure-apps/?view=aspnetcore-10.0&utm_source=chatgpt.com&tabs=visual-studio
+
+Show swagger UI on the deployed website:
+https://stackoverflow.com/questions/30028736/how-to-use-swagger-as-welcome-page-of-iappbuilder-in-webapi
 
 EXTRA - MOBILE CLIENT
 - Created a small python flask app to display information from the API.
