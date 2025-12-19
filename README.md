@@ -22,7 +22,7 @@ TESTING
 To develop unit testing for my project I used the following tutorials: 
 - https://learn.microsoft.com/en-us/dotnet/core/testing/unit-testing-best-practices
 - https://www.c-sharpcorner.com/article/unit-test-crud-operation-in-web-api-using-nunit-testing-framework/
-- https://dev.to/imdj/unit-testing-aspnet-core-web-api-with-moq-and-xunit-controllers-services-nci?utm_source=chatgpt.com 
+- https://dev.to/imdj/unit-testing-aspnet-core-web-api-with-moq-and-xunit-controllers-services-nci?utm_source
 
 Unit Tests
 - Testing CRUD functionality for drinks, sales, suppliers and user data.
@@ -33,7 +33,7 @@ Postman
 
 DEPLOYMENT
 I used Azure to deploy my API, by following this tutorial:
-https://learn.microsoft.com/en-us/aspnet/core/host-and-deploy/azure-apps/?view=aspnetcore-10.0&utm_source=chatgpt.com&tabs=visual-studio
+https://learn.microsoft.com/en-us/aspnet/core/host-and-deploy/azure-apps
 
 Show swagger UI on the deployed website:
 https://stackoverflow.com/questions/30028736/how-to-use-swagger-as-welcome-page-of-iappbuilder-in-webapi
